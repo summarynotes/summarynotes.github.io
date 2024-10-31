@@ -1,0 +1,316 @@
+.
+├── 404.html
+├── assets
+│   ├── facts.json
+│   └── img
+│       └── subjects
+│           ├── business_banner.jpg
+│           ├── business_icon.svg
+│           ├── computer_science_banner.jpg
+│           ├── computer_science_icon.svg
+│           ├── default_banner.jpg
+│           ├── default_icon.svg
+│           ├── mathematics_banner.jpg
+│           └── mathematics_icon.svg
+├── _business
+│   ├── 1. Business and its environment.markdown
+│   ├── 2. Human resource management.markdown
+│   ├── 3. Marketing.markdown
+│   ├── 4. Operations Management.markdown
+│   ├── 5. Finance and Accounting.markdown
+│   ├── img
+│   │   ├── boston_matrix.png
+│   │   ├── break_even_analysis.png
+│   │   ├── cash_flow_forecast.png
+│   │   ├── demand_decrease.png
+│   │   ├── hiring.png
+│   │   ├── inventory_control_charts.png
+│   │   ├── market_equilibrium.png
+│   │   ├── percent_capacity.png
+│   │   ├── product_life_cycle.png
+│   │   ├── profit_and_cash.png
+│   │   ├── shifts_in_demand_and_supply.png
+│   │   ├── supply_decrease.png
+│   │   └── turnover.png
+│   └── pdf
+│       ├── 1. Business and its environment.pdf
+│       ├── 2. Human resource management.pdf
+│       ├── 3. Marketing.pdf
+│       ├── 4. Operations Management.pdf
+│       └── 5. Finance and Accounting.pdf
+├── _computer_science
+│   ├── 10. Ethics and ownership.markdown
+│   ├── 1. Information representation and multimedia.markdown
+│   ├── 2. Communication and networking technologies.markdown
+│   ├── 3. Hardware.markdown
+│   ├── 4. Logic gates and logic circuits.markdown
+│   ├── 5. Processor fundamentals.markdown
+│   ├── 6. Assembly language programming.markdown
+│   ├── 7. Monitoring and control systems.markdown
+│   ├── 8. System software.markdown
+│   ├── 9. Security, privacy and data integrity.markdown
+│   ├── img
+│   │   ├── addressing.png
+│   │   ├── a_star_cost.png
+│   │   ├── a_star.png
+│   │   ├── bnf.png
+│   │   ├── boolean_algebra.png
+│   │   ├── boolean.png
+│   │   ├── bubble_sort.png
+│   │   ├── bus.png
+│   │   ├── cables.png
+│   │   ├── cpu.png
+│   │   ├── digital_certificate.png
+│   │   ├── digital_signature.png
+│   │   ├── dijkstras_algorithm.png
+│   │   ├── encryption.png
+│   │   ├── fe_cycle.png
+│   │   ├── flags.png
+│   │   ├── flynn.png
+│   │   ├── front_end_analysis.png
+│   │   ├── full_adder_ckt.png
+│   │   ├── full_adder.png
+│   │   ├── graph.png
+│   │   ├── half_adder_ckt.png
+│   │   ├── half_adder.png
+│   │   ├── hard_drive.png
+│   │   ├── immediate.png
+│   │   ├── insertion_sort.png
+│   │   ├── instruction.png
+│   │   ├── ip_class.png
+│   │   ├── iterative.png
+│   │   ├── jk.png
+│   │   ├── jk_table.png
+│   │   ├── memory_hierarchy.png
+│   │   ├── neural_network.png
+│   │   ├── optical_storage.png
+│   │   ├── os_layered.png
+│   │   ├── os_modular.png
+│   │   ├── paging.png
+│   │   ├── pipelining.png
+│   │   ├── process.png
+│   │   ├── program_dev_life_cycle.png
+│   │   ├── quantum_cryptography.png
+│   │   ├── recursion_stack.png
+│   │   ├── rpn_eval.png
+│   │   ├── satellite.png
+│   │   ├── segmentation.png
+│   │   ├── sr.png
+│   │   ├── sr_table.png
+│   │   ├── state_transition_diagram_no_op.png
+│   │   ├── state_transition_diagram_op.png
+│   │   ├── state_transition_table.png
+│   │   ├── structure_chart.png
+│   │   ├── syntax_diagram.png
+│   │   ├── topology.png
+│   │   ├── virtual_memory.png
+│   │   ├── waterfall.png
+│   │   ├── wireless.png
+│   │   └── wo_vm.png
+│   ├── Paper 2 theory.md
+│   ├── Paper 3 note.markdown
+│   └── pdf
+│       ├── 1. Information representation and multimedia.pdf
+│       ├── 2. Communication and networking technologies.pdf
+│       ├── 3. Hardware.pdf
+│       ├── 4. Logic gates and logic circuits.pdf
+│       ├── 5. Processor fundamentals.pdf
+│       ├── 6. Assembly language programming.pdf
+│       ├── 7. Monitoring and control systems.pdf
+│       ├── 8. System software.pdf
+│       ├── 9. Security, privacy and data integrity.pdf
+│       ├── Paper 2 theory.pdf
+│       ├── Paper 3 note.pdf
+│       └── X. Ethics and ownership.pdf
+├── _config.yml
+├── contact.html
+├── content.txt
+├── _data
+│   └── colors.yml
+├── _includes
+│   └── components
+│       ├── head.html
+│       ├── navbar.html
+│       └── scripts.html
+├── index.html
+├── _layouts
+│   ├── chapters.html
+│   ├── default.html
+│   └── note.html
+├── _mathematics
+├── notes.html
+├── _plugins
+├── scripts
+│   └── scripts.js
+├── _site
+│   ├── 404.html
+│   ├── assets
+│   │   ├── facts.json
+│   │   └── img
+│   │       └── subjects
+│   │           ├── business_banner.jpg
+│   │           ├── business_icon.svg
+│   │           ├── computer_science_banner.jpg
+│   │           ├── computer_science_icon.svg
+│   │           ├── default_banner.jpg
+│   │           ├── default_icon.svg
+│   │           ├── mathematics_banner.jpg
+│   │           └── mathematics_icon.svg
+│   ├── contact
+│   │   └── index.html
+│   ├── content.txt
+│   ├── index.html
+│   ├── notes
+│   │   ├── business
+│   │   │   ├── 1. Business and its environment
+│   │   │   │   └── index.html
+│   │   │   ├── 2. Human resource management
+│   │   │   │   └── index.html
+│   │   │   ├── 3. Marketing
+│   │   │   │   └── index.html
+│   │   │   ├── 4. Operations Management
+│   │   │   │   └── index.html
+│   │   │   ├── 5. Finance and Accounting
+│   │   │   │   └── index.html
+│   │   │   ├── img
+│   │   │   │   ├── boston_matrix.png
+│   │   │   │   ├── break_even_analysis.png
+│   │   │   │   ├── cash_flow_forecast.png
+│   │   │   │   ├── demand_decrease.png
+│   │   │   │   ├── hiring.png
+│   │   │   │   ├── inventory_control_charts.png
+│   │   │   │   ├── market_equilibrium.png
+│   │   │   │   ├── percent_capacity.png
+│   │   │   │   ├── product_life_cycle.png
+│   │   │   │   ├── profit_and_cash.png
+│   │   │   │   ├── shifts_in_demand_and_supply.png
+│   │   │   │   ├── supply_decrease.png
+│   │   │   │   └── turnover.png
+│   │   │   ├── index.html
+│   │   │   └── pdf
+│   │   │       ├── 1. Business and its environment.pdf
+│   │   │       ├── 2. Human resource management.pdf
+│   │   │       ├── 3. Marketing.pdf
+│   │   │       ├── 4. Operations Management.pdf
+│   │   │       └── 5. Finance and Accounting.pdf
+│   │   ├── computer-science
+│   │   │   ├── 10. Ethics and ownership
+│   │   │   │   └── index.html
+│   │   │   ├── 1. Information representation and multimedia
+│   │   │   │   └── index.html
+│   │   │   ├── 2. Communication and networking technologies
+│   │   │   │   └── index.html
+│   │   │   ├── 3. Hardware
+│   │   │   │   └── index.html
+│   │   │   ├── 4. Logic gates and logic circuits
+│   │   │   │   └── index.html
+│   │   │   ├── 5. Processor fundamentals
+│   │   │   │   └── index.html
+│   │   │   ├── 6. Assembly language programming
+│   │   │   │   └── index.html
+│   │   │   ├── 7. Monitoring and control systems
+│   │   │   │   └── index.html
+│   │   │   ├── 8. System software
+│   │   │   │   └── index.html
+│   │   │   ├── 9. Security, privacy and data integrity
+│   │   │   │   └── index.html
+│   │   │   ├── img
+│   │   │   │   ├── addressing.png
+│   │   │   │   ├── a_star_cost.png
+│   │   │   │   ├── a_star.png
+│   │   │   │   ├── bnf.png
+│   │   │   │   ├── boolean_algebra.png
+│   │   │   │   ├── boolean.png
+│   │   │   │   ├── bubble_sort.png
+│   │   │   │   ├── bus.png
+│   │   │   │   ├── cables.png
+│   │   │   │   ├── cpu.png
+│   │   │   │   ├── digital_certificate.png
+│   │   │   │   ├── digital_signature.png
+│   │   │   │   ├── dijkstras_algorithm.png
+│   │   │   │   ├── encryption.png
+│   │   │   │   ├── fe_cycle.png
+│   │   │   │   ├── flags.png
+│   │   │   │   ├── flynn.png
+│   │   │   │   ├── front_end_analysis.png
+│   │   │   │   ├── full_adder_ckt.png
+│   │   │   │   ├── full_adder.png
+│   │   │   │   ├── graph.png
+│   │   │   │   ├── half_adder_ckt.png
+│   │   │   │   ├── half_adder.png
+│   │   │   │   ├── hard_drive.png
+│   │   │   │   ├── immediate.png
+│   │   │   │   ├── insertion_sort.png
+│   │   │   │   ├── instruction.png
+│   │   │   │   ├── ip_class.png
+│   │   │   │   ├── iterative.png
+│   │   │   │   ├── jk.png
+│   │   │   │   ├── jk_table.png
+│   │   │   │   ├── memory_hierarchy.png
+│   │   │   │   ├── neural_network.png
+│   │   │   │   ├── optical_storage.png
+│   │   │   │   ├── os_layered.png
+│   │   │   │   ├── os_modular.png
+│   │   │   │   ├── paging.png
+│   │   │   │   ├── pipelining.png
+│   │   │   │   ├── process.png
+│   │   │   │   ├── program_dev_life_cycle.png
+│   │   │   │   ├── quantum_cryptography.png
+│   │   │   │   ├── recursion_stack.png
+│   │   │   │   ├── rpn_eval.png
+│   │   │   │   ├── satellite.png
+│   │   │   │   ├── segmentation.png
+│   │   │   │   ├── sr.png
+│   │   │   │   ├── sr_table.png
+│   │   │   │   ├── state_transition_diagram_no_op.png
+│   │   │   │   ├── state_transition_diagram_op.png
+│   │   │   │   ├── state_transition_table.png
+│   │   │   │   ├── structure_chart.png
+│   │   │   │   ├── syntax_diagram.png
+│   │   │   │   ├── topology.png
+│   │   │   │   ├── virtual_memory.png
+│   │   │   │   ├── waterfall.png
+│   │   │   │   ├── wireless.png
+│   │   │   │   └── wo_vm.png
+│   │   │   ├── Paper 2 theory
+│   │   │   │   └── index.html
+│   │   │   ├── Paper 3 note
+│   │   │   │   └── index.html
+│   │   │   └── pdf
+│   │   │       ├── 1. Information representation and multimedia.pdf
+│   │   │       ├── 2. Communication and networking technologies.pdf
+│   │   │       ├── 3. Hardware.pdf
+│   │   │       ├── 4. Logic gates and logic circuits.pdf
+│   │   │       ├── 5. Processor fundamentals.pdf
+│   │   │       ├── 6. Assembly language programming.pdf
+│   │   │       ├── 7. Monitoring and control systems.pdf
+│   │   │       ├── 8. System software.pdf
+│   │   │       ├── 9. Security, privacy and data integrity.pdf
+│   │   │       ├── Paper 2 theory.pdf
+│   │   │       ├── Paper 3 note.pdf
+│   │   │       └── X. Ethics and ownership.pdf
+│   │   ├── computer_science
+│   │   │   └── index.html
+│   │   ├── index.html
+│   │   └── mathematics
+│   │       └── index.html
+│   ├── scripts
+│   │   └── scripts.js
+│   ├── study-guide
+│   │   └── index.html
+│   └── tests
+│       └── index.html
+├── structure.txt
+├── study-guide.html
+├── styles
+├── _subjects
+│   ├── business.markdown
+│   ├── computer_science.markdown
+│   └── mathematics.markdown
+├── _tests
+│   ├── business
+│   ├── computer-science
+│   └── mathematics
+└── tests.html
+
+56 directories, 257 files

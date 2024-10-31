@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operations management - A Level Notes</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#1a1b26',
+                    secondary: '#2d2d3a'
+                }
+            }
+        }
+    }
+</script>
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-primary transition-colors duration-200 min-h-screen flex flex-col">
+  <nav
+  class="bg-white dark:bg-primary border-b border-gray-200 dark:border-gray-700 transition-colors duration-200 fixed top-0 left-0 right-0 z-50 bg-white dark:bg-primary border-b border-gray-200 dark:border-gray-700 transition-colors duration-200"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <!-- Left side -->
+      <div class="flex items-center gap-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <div
+            class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center"
+          >
+            <svg
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1280.000000pt"
+              height="1280.000000pt"
+              viewBox="-100 -100 1480.000000 1480.000000"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <metadata>
+                Created by potrace 1.15, written by Peter Selinger 2001-2017
+                This attribution was intentionally left here by Bishal Tiwari.
+                Don't remove.
+              </metadata>
+              <g
+                transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+                fill="#000000"
+                stroke="none"
+              >
+                <path
+                  d="M5673 11228 l-372 -192 -370 -850 c-743 -1708 -1060 -2436 -1601
+-3681 -304 -698 -622 -1430 -708 -1625 -85 -195 -212 -488 -282 -650 -121
+-280 -385 -885 -547 -1255 -41 -93 -141 -325 -223 -515 -82 -190 -221 -509
+-308 -710 l-159 -365 964 -3 963 -2 363 186 c199 103 367 192 374 198 12 11
+93 213 492 1226 105 267 202 510 214 540 l23 55 1795 -4 c986 -2 1796 -7 1799
+-12 3 -4 205 -498 450 -1098 l444 -1091 984 0 984 0 374 191 c206 105 374 191
+374 193 0 3 -60 144 -320 746 -139 322 -265 614 -280 650 -15 36 -141 328
+-280 650 -139 322 -265 614 -280 650 -15 36 -141 328 -280 650 -139 322 -265
+614 -280 650 -15 36 -141 328 -280 650 -139 322 -265 614 -280 650 -24 58
+-332 771 -642 1490 -61 140 -136 316 -168 390 -32 74 -158 367 -280 650 -122
+283 -282 655 -355 825 -74 171 -201 465 -282 655 l-149 345 -749 2 -750 3
+-372 -192z m717 -3278 c45 -118 108 -285 140 -370 32 -85 95 -252 140 -370 45
+-118 158 -415 251 -660 93 -245 224 -591 292 -770 l123 -325 -1045 -3 c-574
+-1 -1046 0 -1048 2 -4 4 40 118 467 1226 149 388 339 881 422 1095 83 215 153
+396 156 404 7 19 9 15 102 -229z"
+                />
+              </g>
+            </svg>
+          </div>
+          <span class="text-xl font-bold text-gray-900 dark:text-white"
+            ><a href="/">A Level Notes</a></span
+          >
+        </div>
+
+        <!-- Theme Toggle -->
+        <button
+          id="themeToggle"
+          class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 transition-colors duration-200"
+        >
+          <svg
+            class="w-6 h-6"
+            id="themeIcon"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex md:items-center md:gap-4">
+        <a
+          href="/"
+          class="px-4 py-2 text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400 transition-colors duration-200"
+          >Home</a
+        >
+
+        <!-- Notes Dropdown -->
+        <div class="relative group">
+          <button
+            class="px-4 py-2 text-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center gap-2"
+          >
+            Notes
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg py-2 z-50 transition-all duration-200 transform opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100 group-hover:visible"
+          >
+          
+            
+              
+                <a
+                  href="/notes/business/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Business
+                </a>
+              
+                <a
+                  href="/notes/computer_science/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Computer science
+                </a>
+              
+                <a
+                  href="/notes/mathematics/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Mathematics
+                </a>
+              
+            
+          </div>
+        </div>
+
+        <!-- Tests Dropdown -->
+        <div class="relative group">
+          <button
+            class="px-4 py-2 text-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center gap-2"
+          >
+            Tests
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg py-2 z-50 transition-all duration-200 transform opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100 group-hover:visible"
+          >
+          
+            
+              
+                <a
+                  href="/notes/business/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Business
+                </a>
+              
+                <a
+                  href="/notes/computer_science/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Computer science
+                </a>
+              
+                <a
+                  href="/notes/mathematics/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Mathematics
+                </a>
+              
+            
+          </div>
+        </div>
+
+        <a
+          href="/contact"
+          class="px-4 py-2 text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400 transition-colors duration-200"
+          >Contact</a
+        >
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden flex items-center">
+        <button
+          id="menuBtn"
+          class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 transition-colors duration-200"
+        >
+          <svg
+            class="w-6 h-6"
+            id="menuIcon"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-16 6h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div
+    class="hidden md:hidden bg-white dark:bg-primary border-b border-gray-200 dark:border-gray-700"
+    id="mobileMenu"
+  >
+    <div class="px-2 py-3 space-y-1">
+      <a
+        href="/"
+        class="block w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+        >Home</a
+      >
+
+      <!-- Mobile Notes Dropdown -->
+      <div class="mobile-dropdown">
+        <button
+          class="block w-full px-4 py-2 text-left text-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center justify-between"
+        >
+          Notes
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+        <div class="mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+          
+            
+              
+                <a
+                  href="/notes/business/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Business
+                </a>
+              
+                <a
+                  href="/notes/computer_science/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Computer science
+                </a>
+              
+                <a
+                  href="/notes/mathematics/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Mathematics
+                </a>
+              
+            
+        </div>
+      </div>
+
+      <!-- Mobile Tests Dropdown -->
+      <div class="mobile-dropdown">
+        <button
+          class="block w-full px-4 py-2 text-left text-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center justify-between"
+        >
+          Tests
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+        <div class="mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+          
+            
+              
+                <a
+                  href="/notes/business/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Business
+                </a>
+              
+                <a
+                  href="/notes/computer_science/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Computer science
+                </a>
+              
+                <a
+                  href="/notes/mathematics/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Mathematics
+                </a>
+              
+            
+        </div>
+      </div>
+
+      <a
+        href="/contact"
+        class="block w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+        >Contact</a
+      >
+    </div>
+  </div>
+</nav>
+
+  
+  <main class="container mx-auto px-4 py-8 flex-grow flex items-center justify-center w-full">
+      <div class="flex flex-col lg:flex-row min-h-screen bg-gray-50 dark:bg-gray-900">
+  <!-- Mobile Navigation Dropdown -->
+    <div class="px-4 py-4">
+        <div class="lg:hidden p-4 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 rounded-lg">
+            <div class="flex items-center space-x-4">
+            <select id="mobile-nav" onchange="window.location.href=this.value" class="w-full p-2 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600">
+                <option value="">Select Chapter</option>
+                
+                
+      <option value="/notes/business/1.%20Business%20and%20its%20environment/" >
+        Business and its structure
+      </option>
+      
+      <option value="/notes/business/2.%20Human%20resource%20management/" >
+        Human Resource Management
+      </option>
+      
+      <option value="/notes/business/3.%20Marketing/" >
+        The nature of marketing
+      </option>
+      
+      <option value="/notes/business/4.%20Operations%20Management/" selected>
+        Operations management
+      </option>
+      
+      <option value="/notes/business/5.%20Finance%20and%20Accounting/" >
+        Finance and Accounting
+      </option>
+      
+    </select>
+        <button 
+        onclick="generatePDF()" 
+        class="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-900 dark:bg-gray-700 text-white rounded-md hover:bg-gray-700 hover:dark:bg-gray-600 transition-colors duration-200 shadow-lg"
+        aria-label="Download PDF"
+        >
+            <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 20 20" 
+            fill="currentColor" 
+            class="w-4 h-4"
+            >
+                <path d="M10.75 2.75a.75.75 0 0 0-1.5 0v8.614L6.295 8.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.75.75 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03l-2.955 3.129V2.75Z" />
+                <path d="M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5Z" />
+            </svg>
+            PDF
+        </button>
+  </div>
+  </div>
+
+  <!-- Sidebar - Hidden on mobile -->
+  <aside class="hidden lg:block lg:w-72 md:fixed min-h-screen overflow-y-auto bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700">
+    <div class="flex-col space-y-2">
+      <div class="h-full px-3 py-4">
+        <div class="mb-4">
+          
+          <h2 class="px-4 text-lg font-semibold text-gray-900 dark:text-white">
+            Business
+          </h2>
+        </div>
+        
+        
+        <div class="space-y-1">
+          
+          <a href="/notes/business/1.%20Business%20and%20its%20environment/"
+            class="flex items-center px-4 py-2 text-sm rounded-lg group
+            
+            text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50
+            ">
+            <span class="flex-1 whitespace-nowrap truncate">Business and its structure</span>
+            
+          </a>
+          
+          <a href="/notes/business/2.%20Human%20resource%20management/"
+            class="flex items-center px-4 py-2 text-sm rounded-lg group
+            
+            text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50
+            ">
+            <span class="flex-1 whitespace-nowrap truncate">Human Resource Management</span>
+            
+          </a>
+          
+          <a href="/notes/business/3.%20Marketing/"
+            class="flex items-center px-4 py-2 text-sm rounded-lg group
+            
+            text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50
+            ">
+            <span class="flex-1 whitespace-nowrap truncate">The nature of marketing</span>
+            
+          </a>
+          
+          <a href="/notes/business/4.%20Operations%20Management/"
+            class="flex items-center px-4 py-2 text-sm rounded-lg group
+            
+            text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 font-medium
+            ">
+            <span class="flex-1 whitespace-nowrap truncate">Operations management</span>
+            
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+            
+          </a>
+          
+          <a href="/notes/business/5.%20Finance%20and%20Accounting/"
+            class="flex items-center px-4 py-2 text-sm rounded-lg group
+            
+            text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50
+            ">
+            <span class="flex-1 whitespace-nowrap truncate">Finance and Accounting</span>
+            
+          </a>
+          
+        </div>
+        
+      </div>
+      <div class="flex justify-center mt-4">
+        <button 
+          onclick="generatePDF()" 
+          class="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-900 dark:bg-gray-700 text-white rounded-md hover:bg-gray-700 hover:dark:bg-gray-600 transition-colors duration-200 shadow-lg w-[80%]"
+          aria-label="Download PDF"
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 20 20" 
+            fill="currentColor" 
+            class="w-4 h-4"
+          >
+            <path d="M10.75 2.75a.75.75 0 0 0-1.5 0v8.614L6.295 8.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.75.75 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03l-2.955 3.129V2.75Z" />
+            <path d="M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5Z" />
+          </svg>
+          PDF
+        </button>
+      </div>
+    </div>
+  </aside>
+</div>
+
+  <!-- Main Content -->
+  <main class="flex-1 lg:ml-72 bg-gray-50 dark:bg-gray-900 min-w-0">
+    <div class="mx-auto px-4 md:px-4 py-4">
+      <article id="content-to-pdf" class="markdown-body prose dark:prose-invert max-w-none rounded-lg shadow-sm px-4 py-4 bg-white dark:bg-gray-800">
+        <center><h1><b> Operations management </b></h1></center>
+
+<h1 id="the-nature-of-operations">The nature of operations</h1>
+
+<blockquote>
+  <p>Operations management oversees the planning, co-ordination and control of the transformation process, turning resources into outputs.</p>
+</blockquote>
+
+<ul>
+  <li>There are many different transformation process:
+    <ul>
+      <li>Changing characteristics of materials, information, or customers.</li>
+      <li>Changing the location of materials and information.</li>
+      <li>Changing the ownership of materials.</li>
+    </ul>
+  </li>
+  <li>
+    <p>The effectiveness of a business depends a great deal on the quality and cost of operations process.</p>
+  </li>
+  <li>Effective operations:
+    <ul>
+      <li>means the business is doing right thing</li>
+      <li>means the business is doing what it does at a low cost</li>
+      <li>leads to more sales and profits</li>
+    </ul>
+  </li>
+  <li>
+    <p>Output of a business is the total amount produced in a given time period.</p>
+  </li>
+  <li>Operations will involve management of its factors of production: Land, labour, capital and enterprise.</li>
+</ul>
+
+<h2 id="stages-of-the-transformation-process">Stages of the transformation process</h2>
+
+<ul>
+  <li>The operations process involves different stages including:
+    <ul>
+      <li>Producing the initial idea, prototyping and testing</li>
+      <li>designing the best method of production</li>
+      <li>Deciding on levels of inventory which should be held</li>
+      <li>Ensuring production goes according to plan</li>
+      <li>Delivering to next stage in the process</li>
+      <li>Handling recall of products if necessary</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="efficiency-effeectiveness-productivity-and-sustainability">Efficiency, effeectiveness, productivity and sustainability</h2>
+
+<ul>
+  <li>
+    <p>Effectiveness refers to degree to which operation is successful in producing desired result.</p>
+  </li>
+  <li>
+    <p>Efficiency refers to ability to accomplish a task with the minimum expenditure of time and resources.</p>
+  </li>
+  <li>
+    <p>Productivity is one measure efficiency that measures the output relative to inputs used.</p>
+  </li>
+  <li>
+    <p>Sustainability refers to ability to maintain or improve the performance of operations over the long term.</p>
+  </li>
+</ul>
+
+<h2 id="labor-productivity">Labor productivity</h2>
+
+<ul>
+  <li>
+    <p>Labor productivity specifically measures the output per person.</p>
+  </li>
+  <li>Techniques:
+    <ul>
+      <li>Increasing number of hours worked.</li>
+      <li>Training.</li>
+      <li>Investment in equipment and technology.</li>
+      <li>Changing the way work is done.</li>
+      <li>Motivating employees.</li>
+    </ul>
+  </li>
+  <li>Employees resist to higher productivity because:
+    <ul>
+      <li>they don’t want to work longer or harder</li>
+      <li>they don’t want to learn new skills</li>
+      <li>they fear that higher productivity levels may lead to job losses</li>
+      <li>they feel it is unfair that they are producing more unless they receive higher rewards</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="sustainability">Sustainability</h2>
+
+<ul>
+  <li>Becoming sustainable involves:
+    <ul>
+      <li>Using resources that are not being used, such as recycled materials</li>
+      <li>Using fewer resources generally</li>
+      <li>Recyling and reusing resources more</li>
+      <li>Reducing negative impact of business’ activities on the environment.</li>
+    </ul>
+  </li>
+  <li>Implication on business:
+    <ul>
+      <li>Need to reconsider what is produced</li>
+      <li>Need to reconsider how products are produced</li>
+      <li>Need to reconsider packaging.</li>
+    </ul>
+  </li>
+  <li>Benefits:
+    <ul>
+      <li>Good for environment and society</li>
+      <li>may attract customers, employees and investors</li>
+      <li>may avoid negative comment in the media</li>
+      <li>may be mandated by law now or in future</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="capital-intensive-and-labour-intensive-operations">Capital-intensive and labour-intensive operations</h2>
+
+<blockquote>
+  <p>Capital intensive operations involve a relatively large proportion of machinery and equipment relative to other resources. For eg: car manufacturing, oil refining etc.</p>
+</blockquote>
+
+<ul>
+  <li>Advantages:
+    <ul>
+      <li>Can produce high volumes</li>
+      <li>Output can be standardised and consistent</li>
+      <li>May be able to produce continuously</li>
+    </ul>
+  </li>
+  <li>Disadvantages:
+    <ul>
+      <li>Can be expensive to set up</li>
+      <li>High fixed costs increasing break-even output</li>
+      <li>Can be difficult to customise products to individual customer needs</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Labor intensive operations involve a relatively high proportion of people compared to other resources.</p>
+</blockquote>
+
+<ul>
+  <li>Advantages:
+    <ul>
+      <li>Production may be flexible to customer needs</li>
+      <li>Less expensive to set up than buying equipment</li>
+      <li>Employees can use skills and initiative to be creative</li>
+    </ul>
+  </li>
+  <li>Disadvantages:
+    <ul>
+      <li>May take time to train staff with necessary skills</li>
+      <li>Product may vary in consistency and quality</li>
+      <li>Volumes produced may be low</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="operations-methods">Operations methods</h2>
+
+<ul>
+  <li>There are different types of operation methods. Some are:
+    <ul>
+      <li>Job production: one-off, unique, tailor-made items</li>
+      <li>Batch production: Items move as a group from one stage of the process to another</li>
+      <li>Flow production: Items move continuously from one stage of the production process to another</li>
+      <li>Mass customisation: Large-scale production with the flexibility to produce a number of different models</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Changing from job to batch to mass production will depend on the nature of demand and will require investement in capital equipment.</p>
+</blockquote>
+
+<hr />
+
+<h1 id="inventory-management">Inventory management</h1>
+
+<blockquote>
+  <p>Inventory refers to the stocks/product held in a business, such as materials and semi-finished goods.</p>
+</blockquote>
+
+<blockquote>
+  <p>Inventory refers to products that the business owns but will use up during the operations process.</p>
+</blockquote>
+
+<h2 id="managing-inventory">Managing inventory</h2>
+
+<p>Types of inventory include:
+    - Raw materials
+    - Work in progress(semi-finished goods)
+    - Finished products
+    - General supplies</p>
+
+<ul>
+  <li>Costs of holding inventory:
+    <ul>
+      <li>Costs of storage</li>
+      <li>Opportunity cost</li>
+      <li>Security costs</li>
+      <li>Risk of depriciation</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>The benefits of holding inventory are that you have products ready when you need them, and if there are any delays or breakdowns in the process you can continue to operate.</p>
+</blockquote>
+
+<h2 id="inventorystock-control-charts">Inventory(stock) control charts</h2>
+
+<blockquote>
+  <p>Inventory control charts can highlight how much inventory is being used up, how much to reorder and when.</p>
+</blockquote>
+
+<p><img src="../img/inventory_control_charts.png" alt="inventory_control_charts" /></p>
+
+<ul>
+  <li><strong>Buffer inventory</strong> is the minimum amount of inventory a business wants to hold just in case of problems.</li>
+  <li>The <strong>lead time</strong> is how long it takes from ordering the supplies from a supplier to them arriving at the business.</li>
+  <li>The <strong>reorder level</strong> is the amount of inventory left at which a business needs to place an order so that the new inventories arrive before the business goes below its buffer level.</li>
+  <li>The <strong>reorder quantity</strong> is the amount ordered each time.</li>
+</ul>
+
+<blockquote>
+  <p>Inventory control requires decision on how much inventory to hold which requires trade-off between the costs of holding the inventory and the problems that might occur if inventory is not held.</p>
+</blockquote>
+
+<ul>
+  <li>Buffer inventory depends on:
+    <ul>
+      <li>Rate at which inventory is generally used up</li>
+      <li>Warehousing space available</li>
+      <li>The nature of product</li>
+      <li>Reliablity of suppliers</li>
+      <li>Suppliers’ lead time</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Effective inventory management involves making sure that the business does not have too much or too little inventory.</p>
+</blockquote>
+
+<h2 id="supply-chain-management">Supply chain management</h2>
+
+<blockquote>
+  <p>Supply chain refers to all the different stages involved in making, distributing, and selling a good or service, beginning with the material through to the production of parts, through to the distribution and sale of the product.</p>
+</blockquote>
+
+<blockquote>
+  <p>Supply chain management involves managing the flow of goods and services, and includes the different processes that transform raw materials into final products.</p>
+</blockquote>
+
+<ul>
+  <li>Effective supply chain management can lead to:
+    <ul>
+      <li>Lower costs</li>
+      <li>Fewer mistakes</li>
+      <li>Greater co-ordination</li>
+      <li>Better-quality supplies</li>
+      <li>Less time between orders and delivery</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="just-in-time">Just in time</h2>
+
+<blockquote>
+  <p>Unlike Just in case (JIC) approach in which businesses hold inventory just in case there are problems with suppliers or there is increase in demand, Just in Time(JIT) approach involves producing only when they know they can actually sell the items.</p>
+</blockquote>
+
+<ul>
+  <li>Advantages:
+    <ul>
+      <li>Flexibility</li>
+      <li>Reduced costs</li>
+      <li>Waste minimization/Lean production</li>
+    </ul>
+  </li>
+  <li>Disadvantages:
+    <ul>
+      <li>Requires reliable suppliers and availability</li>
+      <li>Firm is vulnerable to action taken by employees</li>
+      <li>Extra reordering</li>
+      <li>Problems if suppliers fail to deliver on time</li>
+    </ul>
+  </li>
+  <li>Running a JIT system requires:
+    <ul>
+      <li>Excellent relationships with suppliers</li>
+      <li>Reliable employees</li>
+      <li>A flexible workforce</li>
+    </ul>
+  </li>
+  <li>Introducting a JIT production involves:
+    <ul>
+      <li>investment in machinery which is flexible</li>
+      <li>training multi-skilled employees</li>
+      <li>change in employees contract</li>
+      <li>building relationships with suppliers who can produce just in time as well.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h1 id="capacity-utilisation-and-outsourcing">Capacity utilisation and outsourcing</h1>
+
+<blockquote>
+  <p>Capacity is the maximum amount of output a firm can produce at a given moment with its existing resources and it depends on the number and quality of its factors of production.</p>
+</blockquote>
+
+<blockquote>
+  <p>Capacity utilisation measures the existing output relative to the maximum.</p>
+</blockquote>
+
+<p><img src="../img/percent_capacity.png" alt="percent_capacity" /></p>
+<ul>
+  <li>
+    <p>Higher levels of capacity utilisation are desirable because they spread the fixed costs of a business over more units.</p>
+  </li>
+  <li>Methods of improving capacity utilisation are:
+    <ul>
+      <li>do nothing: if this is temporary issue</li>
+      <li>renew its marketing activities to boost demands</li>
+      <li>reduce the level of capacity: Rationalisation</li>
+      <li>subcontract for other firms</li>
+    </ul>
+  </li>
+  <li>If levels of demand relative to capacity is high, a firm can:
+    <ul>
+      <li>Start a waiting list</li>
+      <li>increase prices</li>
+    </ul>
+  </li>
+  <li>If there is capacity shortage:
+    <ul>
+      <li>do nothing</li>
+      <li>expand capacity</li>
+      <li>outsource</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="outsourcing">Outsourcing</h2>
+
+<blockquote>
+  <p>Outsourcing occurs when the business uses other producers to undertake some of its operations</p>
+</blockquote>
+
+<ul>
+  <li>It enables a business to:
+    <ul>
+      <li>use the specialist services of other business</li>
+      <li>benefit from lower costs</li>
+      <li>increase capacity</li>
+    </ul>
+  </li>
+  <li>When outsourcing, a business should consider:
+    <ul>
+      <li>the impact on costs</li>
+      <li>the impact on quality</li>
+      <li>reliability of delivery</li>
+      <li>the response of the existing workforce</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+
+      </article>
+    </div>
+  </main>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script>
+    function generatePDF() {
+      const element = document.getElementById('content-to-pdf');
+      const opt = {
+        margin:       0.1,
+        filename:     'document.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+      html2pdf().from(element).set(opt).save();
+    }
+</script>
+
+<style>
+/* Base markdown styles */
+.markdown-body {
+  color: #24292e;
+  background-color: transparent;
+}
+
+.dark .markdown-body {
+  color: #c9d1d9;
+}
+
+/* Table styles */
+.markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background-color: transparent;
+}
+
+.dark .markdown-body table th,
+.dark .markdown-body table td {
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+.markdown-body table tr:nth-child(even) td {
+  background-color: #f9fafb;
+}
+
+.markdown-body table tr:nth-child(odd) td {
+  background-color: #ffffff;
+}
+
+.dark .markdown-body table tr:nth-child(even) td {
+  background-color: #4b4c4d;
+}
+
+.dark .markdown-body table tr:nth-child(odd) td {
+  background-color: #8a8282;
+}
+
+.markdown-body table th {
+  background-color: #f3f4f6;
+}
+
+.dark .markdown-body table th {
+  background-color: #374151;
+}
+
+/* Force list styles in markdown content */
+.markdown-body ul {
+  list-style-type: disc !important;
+  padding-left: 2em !important;
+}
+
+.markdown-body ol {
+  list-style-type: decimal !important;
+  padding-left: 2em !important;
+}
+
+/* Ensure proper text colors in dark mode */
+.dark .prose {
+  --tw-prose-body: #e5e7eb;
+  --tw-prose-headings: #f3f4f6;
+  --tw-prose-lead: #d1d5db;
+  --tw-prose-links: #60a5fa;
+  --tw-prose-bold: #f3f4f6;
+  --tw-prose-counters: #9ca3af;
+  --tw-prose-bullets: #9ca3af;
+  --tw-prose-hr: #374151;
+  --tw-prose-quotes: #f3f4f6;
+  --tw-prose-quote-borders: #374151;
+  --tw-prose-captions: #9ca3af;
+  --tw-prose-code: #f3f4f6;
+  --tw-prose-pre-code: #e5e7eb;
+  --tw-prose-pre-bg: #1f2937;
+  --tw-prose-th-borders: #374151;
+  --tw-prose-td-borders: #374151;
+}
+
+/* Mobile dropdown styles */
+#mobile-nav {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+.dark #mobile-nav {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+}
+
+/* Additional dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+  .markdown-body {
+    color-scheme: dark;
+  }
+}
+</style>
+  </main>
+
+  <script>
+    // Theme toggle
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+
+    function updateThemeIcon(isDark) {
+        themeIcon.innerHTML = isDark 
+            ? '<path fill="blue" d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>'
+            : '<path fill="yellow" fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>';
+    }
+
+    // Initialize the icon on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        const isDark = html.classList.contains('dark');
+        updateThemeIcon(isDark);
+    });
+    
+    themeToggle.addEventListener('click', () => {
+        event.preventDefault();
+        const isDark = html.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeIcon(html.classList.contains('dark'));
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const menuIcon = document.getElementById('menuIcon');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('hidden');
+        menuIcon.innerHTML = isOpen
+            ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"/>'
+            : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+    });
+
+    // Mobile dropdowns
+    function toggleDropdown(button) {
+        const dropdown = button.nextElementSibling;
+        const arrow = button.querySelector('svg');
+        dropdown.classList.toggle('hidden');
+        arrow.style.transform = dropdown.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+    }
+</script>
+</body>
+</html>

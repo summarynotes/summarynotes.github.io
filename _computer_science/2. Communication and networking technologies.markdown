@@ -1,0 +1,167 @@
+---
+layout: note
+title: 2. Communication and networking technologies
+subject: computer_science
+---
+<u><b>Chapter 2: Communication and networking technologies.</b></u>
+
+## Networking devices:
+
+- Hub: Connects devices and forwards data from one port to every port.
+- Switch: Connects devices and forwards data from one port to another specific port.
+- Router: Directs data between networks.
+- Gateway: Connects networks with different protocol.
+- Bridge: Connects networks-segments with same protocol.
+- Network Interface Card(NIC): Available on end-sytem. Has ports for LAN.
+- Repeater: Receives signal and generates a new full-strength signal.
+- Wireless Access Point(WAP): Central Device in WiFi LAN. Needs WNIC.
+
+## Network based on size
+
+- LAN(Local area network): Small, owned by an organization or company within a site or branch, single switch/hub. Eg. Office network.
+- MAN(Metropolitan area network): Larger, over longer distance. Eg. Traffic control CCTV network.
+- WAN: Large organization, spread over large distance. Eg. Internet.
+
+> There isn't a fixed rule for LAN, MAN and WAN.
+
+## Network Architecture/Model
+
+- Client-Server Model: Some computers provide service(servers) and some request and use features(clients).
+    - Thin client: Client just takes input and shows output. Server runs application.
+    - Thick client: Clieent can do some processing but relies on server for *heavy* work. 
+
+> Another type is peer to peer where each computer has equal responsibility. (Discussed in paper 3.)
+
+- Peer to peer model is oftten used for file sharing where each peer(computer) can send and receive file from each-other. But if security and control is of main priority, client-server is used.
+
+> Server can be: File server, DNS server, etc.
+
+## Transmision modes:
+
+- Simplex: One way data transfer
+- Half-duplex: Both way but not simultaneously
+- Full-duplex: Both way simultaneously
+
+
+- Unicast: One-to-one communication
+- Multicast: One-to-many communication
+- Broadcast: One-to-all communication
+
+## Network Topologies
+
+> Network topology is the layout of computers in LAN.
+
+- Bus topology: A central link(bus) with several drop lines to connect to end-systems.
+    - Advantages:
+        - Simple to setup
+        - Simple to add nodes
+    - Disadvantages:
+        - If the central link fails, network fails. (But not if one drop line fails or node fails)
+        - Broadcast
+
+- Mesh topology: Each pair of computer is connected.
+    - Advantages:
+        - Fast
+        - No single point of failure.
+    - Disadvantages:
+        - Lots of wires
+
+- Star topology: Each end-system is connected to a central hub or switch(mostly switch).
+    - Advantages:
+        - Adding and removing nodes is easy
+        - Central device can be used to connect to internet(or other network).
+    - Disadvantages:
+        - Single point of failure
+
+- Ring topology: Connected in a ring, data flows in one direction(clockwise or anti-clockwise)
+    - Not used as it has single point of failure, privacy issue, need to disrupt network to add device.
+
+![topology](../img/topology.png)
+
+> bus, star, ring, mesh toopologies are shown in image above
+
+> Hybrid topology is also used.
+
+## Transmission media
+
+- Wired:
+    - Twisted pair (RJ-45 connector)
+    - Co-axial (BNC connector)
+    - Fibre-optics (SC connector)
+![cables](../img/cables.png)
+
+- Wireless:
+    - Radio
+    - Microwave
+    - Infrared
+![wireless](../img/wireless.png)
+
+> Radio, microwave and infrared are all electromagnetic radiation with different frequency. Higher frequency => lower penetrative power.
+
+- Wired for faster, reliable, less interference.
+- Wireless for ease of use(mostly).
+
+- Satellite: 
+    - Geostationary Earth Orbit: For long distance telephone and network communication.(3 for global coverage)
+    - Medium Earth Orbit: GPS.(10 for global coverage)
+    - Lower Earth Orbit: Supplement mobile phone networks. (50 for full global coverage) 
+![satellite](../img/satellite.png)
+
+> Van allen belts are areas in atmosphere with high levels of electrically charged particles, which interfere with satellite.
+
+## Ethernet and Collision.
+
+> Ethernet is wired standard(IEEE 802.3) which is primarily focused on LANs.
+
+- Shared medium => if two end-system transmit at once, it can result in *collision*.
+
+- CSMA/CD(Collision Sense Multiple Access with Collision Detection):
+    - Check voltage on medium for activity
+    - If activity, wait for random time.
+    - If no activity, start transmission
+    - Continuously check for collision
+    - If not detected, continue sending and done.
+    - If detected, stop, transmit jamming signal(high voltage) and try again aftter random time.
+
+> Modern Ethernet is switched with buffering capacity, which doesn't require CSMA/CD.
+
+## IP Addressing:
+
+> Internet Protocol adressing is used to define from where and to where data is being transmitted.
+
+- IPv4 addressing:
+    - uses 32 bits => 2<sup>32</sup> different addresses.
+    - Not enough.
+    - In original scheme, different classes existed with different number of IPs.
+    - CIDR(Classless interdomain routing) retains concept of netID and hostId but doesn't inforce number of bits like in classful approach.
+    - Subnetting allows for organization to take a larger class and split it into smaller parts.
+    - Network Address Translation(NAT): Organizations use special IPs for private netwrok and NAT box translates it. This is abstracted.
+
+![ip_class](../img/ip_class.png)
+> Dynamic IP changes regularly for device whereas Static doesn't. (and static is costly.)
+
+- IPv6:
+    - 128 bits is used
+    - Will not be depleted.
+    - Still not being used everywhere.
+
+## Domain Names
+
+> People can remember words and letters(URL), IP addresses are numbers. Domain Name Service/System(DNS) server translates that.
+
+- DNS is also hierarchical.
+- Looking up IP based on domain name is called *name resolution*.
+---
+
+## Terms:
+
+- ISP: Internet Service Provider. Provides internet connection.
+- PSTN: Public Switched telephone network. *Dial-up* connection that used telephone wire and modem.
+- WWW: World wide web. Distributed application which is available on the internet.
+- Cloud computing: Accessing computing service via internet. *Private cloud* is established by a company by either taking full responsibility, outtsourcing partially or fully. *Public* cloud is created, managed and owned by third party service provider.
+    - Cloud computing services include infrastructure, platform or software.
+- Bit streaming: 
+    - On demand: Incoming data are buffered and received as they are *used*
+    - Real time: live transmission
+
+---

@@ -1,0 +1,150 @@
+---
+layout: default
+title: Notes
+description: Find summary notes here.
+permalink: /notes/
+---
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <!-- Header -->
+  <div class="text-center mb-16">
+    <div class="flex items-center justify-center mb-4">
+      <h1 class="text-4xl font-bold text-gray-900 dark:text-white mr-2">
+        Study Notes
+      </h1>
+      <div
+        class="bg-blue-500 w-12 h-12 rounded-lg flex items-center justify-center"
+      >
+        <svg
+          class="w-6 h-6 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+          />
+        </svg>
+      </div>
+    </div>
+    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+      Choose your subject to access comprehensive study materials, practice
+      questions, and exam tips
+    </p>
+  </div>
+
+  <!-- Subjects Grid -->
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    {% assign subjects_list = site.subjects %}
+    {% for subject in subjects_list %}
+    {% assign subject_slug = subject.title | slugify %}
+    
+    {% assign banner_image_jpg = "/assets/img/subjects/" | append: subject.subject | append: "_banner.jpg" %}
+    {% assign icon_image_svg = "/assets/img/subjects/" | append: subject.subject | append: "_icon.svg" %}
+    
+    {% assign banner_exists = false %}
+    {% assign icon_exists = false %}
+    
+    {% for static_file in site.static_files %}
+      {% if static_file.path == banner_image_jpg %}
+        {% assign banner_exists = true %}
+      {% endif %}
+      {% if static_file.path == icon_image_svg %}
+        {% assign icon_exists = true %}
+      {% endif %}
+    {% endfor %}
+    <a
+      href="/notes/{{ subject_slug | replace: '-', '_' }}"
+      class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+    >
+      <div
+        class="relative p-6 lg:h-64 md:h-auto sm:h-auto flex flex-col justify-between"
+      >
+        <!-- Banner Image Background -->
+        <div class="absolute inset-0">
+          {% if banner_exists %}
+          <img
+            src="{{ banner_image_jpg }}"
+            alt="{{ subject.title }} banner"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          {% else %}
+          <img
+            src="/assets/img/subjects/default_banner.jpg"
+            alt="Default banner"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          {% endif %}
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-white/80 via-white/20 to-white/20 dark:from-gray-800/80 dark:via-gray-800/20 dark:to-gray-800/20"
+          ></div>
+        </div>
+
+        <!-- Top Section -->
+        <div class="relative flex items-start justify-between">
+          <!-- Icon and Title -->
+          <div class="flex items-center space-x-4">
+            <div class="bg-white dark:bg-white rounded-xl p-2 shadow-lg">
+              {% if icon_exists %}
+              <img
+                src="{{ icon_image_svg }}"
+                alt="{{ subject.title }} icon"
+                class="w-10 h-10"
+              />
+              {% else %}
+              <img
+                src="/assets/img/subjects/default_icon.svg"
+                alt="Default icon"
+                class="w-10 h-10"
+              />
+              {% endif %}
+            </div>
+        
+            <h2
+              class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-900 dark:group-hover:text-white transition-colors"
+            >
+              {{ subject.title }}
+            </h2>
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+  <!-- Optional: Quick Navigation Section -->
+  <div class="mt-16 bg-gray-50 dark:bg-gray-800/50 rounded-2xl p-8">
+    <div class="flex flex-col sm:flex-row items-center justify-between">
+      <div class="text-center sm:text-left mb-6 sm:mb-0">
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+          Need Help Getting Started?
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 mt-2">
+          Check out our study guides and tips
+        </p>
+      </div>
+      <a
+        href="/study-guide"
+        class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition-colors shadow-lg hover:shadow-xl"
+      >
+        View Study Guide
+        <svg
+          class="ml-2 w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17 8l4 4m0 0l-4 4m4-4H3"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>

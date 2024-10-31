@@ -1,0 +1,27 @@
+title: A Level Notes
+description: Your A Level study companion
+
+permalink: pretty
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    line_numbers: true
+  auto_ids: true
+  toc_levels: 1..6
+
+# Collections
+collections:
+  subjects:
+    output: true
+    permalink: /notes/:path/
+  business:
+    output: true
+    permalink: /notes/business/:path/
+  mathematics:
+    output: true
+    permalink: /notes/mathematics/:path/
+  computer_science:
+    output: true
+    permalink: /notes/computer-science/:path/

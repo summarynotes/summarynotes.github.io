@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human Resource Management - A Level Notes</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#1a1b26',
+                    secondary: '#2d2d3a'
+                }
+            }
+        }
+    }
+</script>
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-primary transition-colors duration-200 min-h-screen flex flex-col">
+  <nav
+  class="bg-white dark:bg-primary border-b border-gray-200 dark:border-gray-700 transition-colors duration-200 fixed top-0 left-0 right-0 z-50 bg-white dark:bg-primary border-b border-gray-200 dark:border-gray-700 transition-colors duration-200"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <!-- Left side -->
+      <div class="flex items-center gap-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <div
+            class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center"
+          >
+            <svg
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1280.000000pt"
+              height="1280.000000pt"
+              viewBox="-100 -100 1480.000000 1480.000000"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <metadata>
+                Created by potrace 1.15, written by Peter Selinger 2001-2017
+                This attribution was intentionally left here by Bishal Tiwari.
+                Don't remove.
+              </metadata>
+              <g
+                transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+                fill="#000000"
+                stroke="none"
+              >
+                <path
+                  d="M5673 11228 l-372 -192 -370 -850 c-743 -1708 -1060 -2436 -1601
+-3681 -304 -698 -622 -1430 -708 -1625 -85 -195 -212 -488 -282 -650 -121
+-280 -385 -885 -547 -1255 -41 -93 -141 -325 -223 -515 -82 -190 -221 -509
+-308 -710 l-159 -365 964 -3 963 -2 363 186 c199 103 367 192 374 198 12 11
+93 213 492 1226 105 267 202 510 214 540 l23 55 1795 -4 c986 -2 1796 -7 1799
+-12 3 -4 205 -498 450 -1098 l444 -1091 984 0 984 0 374 191 c206 105 374 191
+374 193 0 3 -60 144 -320 746 -139 322 -265 614 -280 650 -15 36 -141 328
+-280 650 -139 322 -265 614 -280 650 -15 36 -141 328 -280 650 -139 322 -265
+614 -280 650 -15 36 -141 328 -280 650 -139 322 -265 614 -280 650 -24 58
+-332 771 -642 1490 -61 140 -136 316 -168 390 -32 74 -158 367 -280 650 -122
+283 -282 655 -355 825 -74 171 -201 465 -282 655 l-149 345 -749 2 -750 3
+-372 -192z m717 -3278 c45 -118 108 -285 140 -370 32 -85 95 -252 140 -370 45
+-118 158 -415 251 -660 93 -245 224 -591 292 -770 l123 -325 -1045 -3 c-574
+-1 -1046 0 -1048 2 -4 4 40 118 467 1226 149 388 339 881 422 1095 83 215 153
+396 156 404 7 19 9 15 102 -229z"
+                />
+              </g>
+            </svg>
+          </div>
+          <span class="text-xl font-bold text-gray-900 dark:text-white"
+            ><a href="/">A Level Notes</a></span
+          >
+        </div>
+
+        <!-- Theme Toggle -->
+        <button
+          id="themeToggle"
+          class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 transition-colors duration-200"
+        >
+          <svg
+            class="w-6 h-6"
+            id="themeIcon"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex md:items-center md:gap-4">
+        <a
+          href="/"
+          class="px-4 py-2 text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400 transition-colors duration-200"
+          >Home</a
+        >
+
+        <!-- Notes Dropdown -->
+        <div class="relative group">
+          <button
+            class="px-4 py-2 text-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center gap-2"
+          >
+            Notes
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg py-2 z-50 transition-all duration-200 transform opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100 group-hover:visible"
+          >
+          
+            
+              
+                <a
+                  href="/notes/business/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Business
+                </a>
+              
+                <a
+                  href="/notes/computer_science/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Computer science
+                </a>
+              
+                <a
+                  href="/notes/mathematics/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Mathematics
+                </a>
+              
+            
+          </div>
+        </div>
+
+        <!-- Tests Dropdown -->
+        <div class="relative group">
+          <button
+            class="px-4 py-2 text-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center gap-2"
+          >
+            Tests
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg py-2 z-50 transition-all duration-200 transform opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100 group-hover:visible"
+          >
+          
+            
+              
+                <a
+                  href="/notes/business/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Business
+                </a>
+              
+                <a
+                  href="/notes/computer_science/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Computer science
+                </a>
+              
+                <a
+                  href="/notes/mathematics/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Mathematics
+                </a>
+              
+            
+          </div>
+        </div>
+
+        <a
+          href="/contact"
+          class="px-4 py-2 text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400 transition-colors duration-200"
+          >Contact</a
+        >
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden flex items-center">
+        <button
+          id="menuBtn"
+          class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 transition-colors duration-200"
+        >
+          <svg
+            class="w-6 h-6"
+            id="menuIcon"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-16 6h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div
+    class="hidden md:hidden bg-white dark:bg-primary border-b border-gray-200 dark:border-gray-700"
+    id="mobileMenu"
+  >
+    <div class="px-2 py-3 space-y-1">
+      <a
+        href="/"
+        class="block w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+        >Home</a
+      >
+
+      <!-- Mobile Notes Dropdown -->
+      <div class="mobile-dropdown">
+        <button
+          class="block w-full px-4 py-2 text-left text-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center justify-between"
+        >
+          Notes
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+        <div class="mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+          
+            
+              
+                <a
+                  href="/notes/business/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Business
+                </a>
+              
+                <a
+                  href="/notes/computer_science/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Computer science
+                </a>
+              
+                <a
+                  href="/notes/mathematics/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Mathematics
+                </a>
+              
+            
+        </div>
+      </div>
+
+      <!-- Mobile Tests Dropdown -->
+      <div class="mobile-dropdown">
+        <button
+          class="block w-full px-4 py-2 text-left text-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center justify-between"
+        >
+          Tests
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+        <div class="mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+          
+            
+              
+                <a
+                  href="/notes/business/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Business
+                </a>
+              
+                <a
+                  href="/notes/computer_science/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Computer science
+                </a>
+              
+                <a
+                  href="/notes/mathematics/"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                >
+                  Mathematics
+                </a>
+              
+            
+        </div>
+      </div>
+
+      <a
+        href="/contact"
+        class="block w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+        >Contact</a
+      >
+    </div>
+  </div>
+</nav>
+
+  
+  <main class="container mx-auto px-4 py-8 flex-grow flex items-center justify-center w-full">
+      <div class="flex flex-col lg:flex-row min-h-screen bg-gray-50 dark:bg-gray-900">
+  <!-- Mobile Navigation Dropdown -->
+    <div class="px-4 py-4">
+        <div class="lg:hidden p-4 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 rounded-lg">
+            <div class="flex items-center space-x-4">
+            <select id="mobile-nav" onchange="window.location.href=this.value" class="w-full p-2 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600">
+                <option value="">Select Chapter</option>
+                
+                
+      <option value="/notes/business/1.%20Business%20and%20its%20environment/" >
+        Business and its structure
+      </option>
+      
+      <option value="/notes/business/2.%20Human%20resource%20management/" selected>
+        Human Resource Management
+      </option>
+      
+      <option value="/notes/business/3.%20Marketing/" >
+        The nature of marketing
+      </option>
+      
+      <option value="/notes/business/4.%20Operations%20Management/" >
+        Operations management
+      </option>
+      
+      <option value="/notes/business/5.%20Finance%20and%20Accounting/" >
+        Finance and Accounting
+      </option>
+      
+    </select>
+        <button 
+        onclick="generatePDF()" 
+        class="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-900 dark:bg-gray-700 text-white rounded-md hover:bg-gray-700 hover:dark:bg-gray-600 transition-colors duration-200 shadow-lg"
+        aria-label="Download PDF"
+        >
+            <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 20 20" 
+            fill="currentColor" 
+            class="w-4 h-4"
+            >
+                <path d="M10.75 2.75a.75.75 0 0 0-1.5 0v8.614L6.295 8.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.75.75 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03l-2.955 3.129V2.75Z" />
+                <path d="M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5Z" />
+            </svg>
+            PDF
+        </button>
+  </div>
+  </div>
+
+  <!-- Sidebar - Hidden on mobile -->
+  <aside class="hidden lg:block lg:w-72 md:fixed min-h-screen overflow-y-auto bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700">
+    <div class="flex-col space-y-2">
+      <div class="h-full px-3 py-4">
+        <div class="mb-4">
+          
+          <h2 class="px-4 text-lg font-semibold text-gray-900 dark:text-white">
+            Business
+          </h2>
+        </div>
+        
+        
+        <div class="space-y-1">
+          
+          <a href="/notes/business/1.%20Business%20and%20its%20environment/"
+            class="flex items-center px-4 py-2 text-sm rounded-lg group
+            
+            text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50
+            ">
+            <span class="flex-1 whitespace-nowrap truncate">Business and its structure</span>
+            
+          </a>
+          
+          <a href="/notes/business/2.%20Human%20resource%20management/"
+            class="flex items-center px-4 py-2 text-sm rounded-lg group
+            
+            text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 font-medium
+            ">
+            <span class="flex-1 whitespace-nowrap truncate">Human Resource Management</span>
+            
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+            
+          </a>
+          
+          <a href="/notes/business/3.%20Marketing/"
+            class="flex items-center px-4 py-2 text-sm rounded-lg group
+            
+            text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50
+            ">
+            <span class="flex-1 whitespace-nowrap truncate">The nature of marketing</span>
+            
+          </a>
+          
+          <a href="/notes/business/4.%20Operations%20Management/"
+            class="flex items-center px-4 py-2 text-sm rounded-lg group
+            
+            text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50
+            ">
+            <span class="flex-1 whitespace-nowrap truncate">Operations management</span>
+            
+          </a>
+          
+          <a href="/notes/business/5.%20Finance%20and%20Accounting/"
+            class="flex items-center px-4 py-2 text-sm rounded-lg group
+            
+            text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50
+            ">
+            <span class="flex-1 whitespace-nowrap truncate">Finance and Accounting</span>
+            
+          </a>
+          
+        </div>
+        
+      </div>
+      <div class="flex justify-center mt-4">
+        <button 
+          onclick="generatePDF()" 
+          class="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-900 dark:bg-gray-700 text-white rounded-md hover:bg-gray-700 hover:dark:bg-gray-600 transition-colors duration-200 shadow-lg w-[80%]"
+          aria-label="Download PDF"
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 20 20" 
+            fill="currentColor" 
+            class="w-4 h-4"
+          >
+            <path d="M10.75 2.75a.75.75 0 0 0-1.5 0v8.614L6.295 8.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.75.75 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03l-2.955 3.129V2.75Z" />
+            <path d="M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5Z" />
+          </svg>
+          PDF
+        </button>
+      </div>
+    </div>
+  </aside>
+</div>
+
+  <!-- Main Content -->
+  <main class="flex-1 lg:ml-72 bg-gray-50 dark:bg-gray-900 min-w-0">
+    <div class="mx-auto px-4 md:px-4 py-4">
+      <article id="content-to-pdf" class="markdown-body prose dark:prose-invert max-w-none rounded-lg shadow-sm px-4 py-4 bg-white dark:bg-gray-800">
+        <center><b><h1>Human Resource Management</h1></b></center>
+
+<h1 id="human-resource-management">Human resource management</h1>
+
+<blockquote>
+  <p>Human resource management(HRM) comprises the acquisition, training, motivation and reward of human resources within the business.</p>
+</blockquote>
+
+<ul>
+  <li>Human resource management is the process of making the most efficient use of the organization’s employees.</li>
+</ul>
+
+<h2 id="purpose-and-role-of-human-resource-management">Purpose and role of human resource management.</h2>
+
+<blockquote>
+  <p>The main purpose of HRM is to achieve organisational objectives, such as growth and increased profitability by enhancing organisational performance.</p>
+</blockquote>
+
+<ul>
+  <li>All elements of HRM, if implemented fully and operated properly, fulfill the needs of individual as well as of the organisation.</li>
+  <li>Outcome of a sucessful HRM policy could be motivated and creative employees who are committed to the firm and who do not seek to leave. Under such sitution, a business should incur lower recruitment costs and enjoy higher level of productivity and a reduction in faulty products.</li>
+  <li>
+    <p>Businesses differ in their interpretation of HRM. Some see it as a confirmation of value of employees while others view employees as simply  another resourcee to be used as effectively as possible.</p>
+  </li>
+  <li>Two key reasons exist to highlight the importance of HRM within business:
+    <ul>
+      <li>Nature of workforce has changed and greater use of part-time and peripheral workers is seen currently.</li>
+      <li>Changes in organisational structure and use of techniques such as delayering and development of empowered teams. Delayering is reduction in the number of levels of hierarchy within an organisational structure.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="workforce-planning">Workforce planning</h2>
+
+<ul>
+  <li>
+    <p>A workforce plan (human resource plan) means assessing the current workforce and actions necessary to meet the business’ future labour needs.</p>
+  </li>
+  <li>Role of workforce plan:
+    <ul>
+      <li>They help businesss to deal with changes by ensuring they have right employees.</li>
+      <li>They help businesses to prepare for changes in workforce such as introduction to new production-line machinery.</li>
+    </ul>
+  </li>
+  <li>Workforce plans are designed to take proactive monitoring and not simply a reactive one.</li>
+</ul>
+
+<h2 id="labour-turnover">Labour turnover</h2>
+
+<ul>
+  <li>
+    <p>Turnover is measure of proportion of a workforce leaving their employment. It is calculated as percentage of a business’ workforce that leaves a business over a given period of time.</p>
+  </li>
+  <li>
+    <p>The formula for turnover is given by:</p>
+  </li>
+</ul>
+
+<p><img src="../img/turnover.png" alt="turnover" />
+<!-- $$
+\text{Turnover} = \left( \frac{\text{Number of staff leaving during the year}}{\text{Average number of staff}} \right) \times 100
+$$ --></p>
+
+<ul>
+  <li>Some level of turnover is inevitable. This has positive effect of being able to recruit employees to bring new ideas into a business.</li>
+  <li>High level of labour turnover results in additional costs to recruit and train new employees. A business might need to increase pay in order to reduce the level of labour turnover.</li>
+  <li>A business also suffers if labour turnover is too low. For example: in creative industries such as marketing, it is often helpful for business to have a stable and steady rate of turnover.</li>
+</ul>
+
+<h2 id="recruitment-and-selection">Recruitment and selection</h2>
+
+<blockquote>
+  <p>Recruitment and selection is the process of filling in organization’s job vacancies by appointing new staff.</p>
+</blockquote>
+
+<ul>
+  <li>The process of recruitment involves the following steps:
+    <ul>
+      <li>Use HR plan to decide number and type of employees needed</li>
+      <li>Prepare 1) Job adverts 2) Job descriptions 2) Person specifications</li>
+      <li>Advertise inside the business (internal recruitment) or outside the business(external recruitment)</li>
+      <li>Receive job applications</li>
+      <li>Prepare shorlist for selection, matching applications and person specifications</li>
+      <li>Select employees using interviews, skill tests etc.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="../img/hiring.png" alt="hiring" /></p>
+<blockquote>
+  <p>Job descriptions list the duties and responsibilities associated with a particular job.</p>
+</blockquote>
+
+<ul>
+  <li>A job description might contain the following information:
+    <ul>
+      <li>The title of the post</li>
+      <li>Employment conditions</li>
+      <li>Some idea of tasks and duties</li>
+      <li>The key aims and responsibilities of the job</li>
+      <li>Where the job fits into the organization</li>
+    </ul>
+  </li>
+  <li>A job description is likely to form the basis of the employment contract.</li>
+</ul>
+
+<blockquote>
+  <p>An employment contract is a legal agreement between an employer and an employee setting forth the terms and conditions of the employment arrangements.</p>
+</blockquote>
+
+<blockquote>
+  <p>Person specification outlinese the skills, knowledge and experiencee necessary to fill a given position successfully.</p>
+</blockquote>
+
+<ul>
+  <li>Person specification might include following information:
+    <ul>
+      <li>Educational and professional qualifications required</li>
+      <li>Character and personality needed</li>
+      <li>Skills and experience wanted.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="methods-of-recruitment">Methods of recruitment</h2>
+
+<ul>
+  <li>A number of options are available for recruitment:
+    <ul>
+      <li>Job advertisements</li>
+      <li>Online recruitments</li>
+      <li>Employment agencies</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="internal-and-external-recruitment">Internal and external recruitment</h2>
+
+<ul>
+  <li>Internal recruitment offers following benefits:
+    <ul>
+      <li>Candidates are familiar with business and its culture</li>
+      <li>They might not require induction training</li>
+      <li>It provides employees with opportunities for promotion</li>
+      <li>It avoids cost of external advertisement</li>
+      <li>Selection is easier as more is known about the candidates.</li>
+    </ul>
+  </li>
+  <li>However, due to limited pool of candidates, skills and experience may be insufficient.</li>
+</ul>
+
+<h2 id="selection">Selection</h2>
+
+<ul>
+  <li>There are various methods of selection:
+    <ul>
+      <li>Curriculum vitae, resumes, and application forms</li>
+      <li>Interviews</li>
+      <li>References</li>
+      <li>Testing</li>
+      <li>Asseesment centers</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="redundancy-and-dismissal">Redundancy and dismissal</h2>
+
+<blockquote>
+  <p>Dismissal is disciplinary action taken against an employee in the form of termination</p>
+</blockquote>
+
+<blockquote>
+  <p>Redundancy takes place when an employee is dismissed because a job no longer exists.</p>
+</blockquote>
+
+<ul>
+  <li>Redundancies can have following reasons:
+    <ul>
+      <li>A business closes down</li>
+      <li>The job of some employees are replaced by new technology</li>
+      <li>A business moves some of its operations overseas</li>
+    </ul>
+  </li>
+  <li>
+    <p>Redundancy can be voluntary or involuntary. A company offers voluntary redundancy near to time of retirement.</p>
+  </li>
+  <li>In case of involuntary redundancy, certain procedure must be followed based on law of country. This might include redundancy pay.</li>
+</ul>
+
+<blockquote>
+  <p>Dismissal is a more general term than redundancy. A dismissal might be due to underperformance, long term illness, misconduct, or some substantial reason such as imprisonment.</p>
+</blockquote>
+
+<h2 id="morale-and-welfare">Morale and welfare</h2>
+
+<ul>
+  <li>
+    <p>Employee welfare is a broad term covering a wide range of facilities that are essential for the well-being of a business’ employees</p>
+  </li>
+  <li>
+    <p>Employee morale is the satisfaction felt by employees within the workplace</p>
+  </li>
+  <li>
+    <p>Work-life balance refers to the obligations placed on employees by employers that determine the amount of time that employees spend on work-related activities.</p>
+  </li>
+  <li>
+    <p>HRM can play a central role in developing and improving the morale and welfare of employees. Recruiting people with the intention of developing their skills and improving their performance throughout a long-term relationship is at the heart of what is called ‘soft’ human resource management.</p>
+  </li>
+</ul>
+
+<h2 id="diversity-and-equality-in-the-workplace">Diversity and equality in the workplace</h2>
+
+<blockquote>
+  <p>Diversity, in an employment context, refers to recognising the differences between individual employees and also the differences that may exist between groups of employees.</p>
+</blockquote>
+
+<blockquote>
+  <p>Equality is the circumstance in which all people are equal, particularly in relation to rights and opportunities in the workplace.</p>
+</blockquote>
+
+<h2 id="training-and-development">Training and development</h2>
+
+<blockquote>
+  <p>Training is a process whereby an individual acquires job-related skills and knowledge.</p>
+</blockquote>
+
+<blockquote>
+  <p>Development refers to activities designed to increase employees’ skills, education, knowledge and abilities in the workplace.</p>
+</blockquote>
+
+<ul>
+  <li>Types of training:
+    <ul>
+      <li>Induction training: This training is intented to introduce an employee to the business including important policies, layout of workplace, new colleagues, and basic duties of the job.</li>
+      <li>Off-the-job training: This involves training outside the workplace, at a college, university or some other training agency.</li>
+      <li>On-the-job training: This form of training doesn’t require the employee to leave the workplace. They learn from experienced employees through observation and work shadowing.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="benefits-of-co-operation-between-management-and-the-workforce">Benefits of co-operation between management and the workforce</h2>
+
+<ul>
+  <li>Benefits to employers:
+    <ul>
+      <li>Helping to develop a strong employer brand</li>
+      <li>Enhancing employee morale</li>
+      <li>Improving the business’ corporate image</li>
+      <li>Strengthening competitiveness</li>
+    </ul>
+  </li>
+  <li>Benefits to employees:
+    <ul>
+      <li>Financial benefits</li>
+      <li>Job security</li>
+      <li>The possibility of greater participation in decision-making</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="trade-unions">Trade unions</h2>
+
+<blockquote>
+  <p>A trade union is an organisation of workers established to protect and improve the economic position and working conditions of its members through collective bargaining.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>Collective bargaining is negotiation between employers and representatives of employees, normally trade union officials.</p>
+  </li>
+  <li>
+    <p>Goal of trade unions include:</p>
+    <ul>
+      <li>Maximising pay</li>
+      <li>Achieving safe and secure working conditions</li>
+      <li>Attaining job security</li>
+      <li>Participating in and influencing decisions in the workplace.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h1 id="motivation">Motivation</h1>
+
+<blockquote>
+  <p>Motivation describes the factors that arouse, maintain and channel behavior towards the goal.</p>
+</blockquote>
+
+<ul>
+  <li>Organization with huge work force possess high level of motivation tend to show the following characteristics:
+  -Low level of absenteeism
+  -Low level of labour turnover
+  -Good relation between manager and employees
+  -high level of labour productivity</li>
+</ul>
+
+<h2 id="motivation-theories">Motivation theories:</h2>
+
+<ul>
+  <li>Motivation theories can be classified into two perspectives:</li>
+  <li>Content theories</li>
+  <li>Process theories</li>
+</ul>
+
+<h2 id="content-theories">Content theories:</h2>
+
+<blockquote>
+  <p>It consider what motivates people. The content theories can be divided into three schools of though.</p>
+</blockquote>
+
+<h3 id="scientific-school">Scientific school</h3>
+
+<p><strong>Key Ideas:</strong></p>
+<ul>
+  <li>Motivation is an external factor achieved through money.</li>
+  <li>Employees should be closely supervised and paid piece rate.</li>
+</ul>
+
+<p><strong>Taylorism:</strong></p>
+<ul>
+  <li>Study the work process to determine the most efficient production method.</li>
+  <li>Observe and time the best workers in these methods.</li>
+  <li>Train the remaining workers to the same standard.</li>
+  <li>Implement differential pay rates and close supervision to increase productivity.</li>
+</ul>
+
+<p>Taylors approach reduced inefficiency and productivity so business did not need as many employees. His ideas resulted in strikes and other forms of industrial action by dissatisfied workers.</p>
+
+<h3 id="human-relation-school">Human relation school:</h3>
+<p><strong>Key Idea:</strong></p>
+<ul>
+  <li>
+    <p>This brought sociological theory into management and accepted that employees could be motivated by meeting their social needs.</p>
+  </li>
+  <li>
+    <p>Hawthorne effect:</p>
+    <ul>
+      <li>it is based on research conducted at western electric companies harthrone plant .</li>
+      <li>it showed that employees were responding to the level of attention they were receiving as part of the investigation and working as a group</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="neo-human-relation-school">Neo-Human relation school:</h3>
+
+<p><strong>Key idea:</strong></p>
+<ul>
+  <li>it highlighted the importance of fulfilling phycological needs to improve employe performance</li>
+</ul>
+
+<h4 id="maslows-hierarchy-of-needs">Maslow’s hierarchy of needs:</h4>
+<ul>
+  <li>The hierarchy of needs is a theory that employees have successive requirements that can be fulfilled through work:
+    <ul>
+      <li>Physiological needs: food, water, shelter, and clothing.</li>
+      <li>Security needs: safe and secure working environment.</li>
+      <li>Social needs: contact and friendship with other employees.</li>
+      <li>Esteem needs: achievement, recognition, and self-respect.</li>
+      <li>Self-actualization: to fulfill one’s potential completely.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="frederick-herzbergs-two-factor-theory">Frederick Herzberg’s Two-Factor Theory:</h4>
+<ul>
+  <li>
+    <p>This was the result of a study designed to test the view that people face two major sets of influences at work.</p>
+  </li>
+  <li>Hygiene or Maintenance Factors: Related to the environment of work
+    <ul>
+      <li>Company policy and administration</li>
+      <li>Supervision of employees</li>
+      <li>Working conditions</li>
+      <li>Salary</li>
+      <li>Relationship with fellow workers</li>
+    </ul>
+  </li>
+  <li>Motivators: Related to the job itself and can be used to motivate
+    <ul>
+      <li>Personal achievement of goals and targets</li>
+      <li>Recognition of achievement</li>
+      <li>Interest in work itself</li>
+      <li>Responsibility for greater and more complex duties</li>
+      <li>Personal growth and advancement</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Herzberg’s crucial finding was that hygiene factors do no lead to motivation but without them employees may be dissatisfied.</p>
+</blockquote>
+
+<h4 id="david-mcclellands-theory-of-needs">David McClelland’s Theory of Needs:</h4>
+<ul>
+  <li>Argued that an individual’s motivation depends upon their needs, which are determined by their experiences.</li>
+  <li>Identified three types of motivational needs:
+    <ul>
+      <li>Achievement motivation</li>
+      <li>Authority/power motivation</li>
+      <li>Affiliation motivation</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="process-theories">Process theories</h2>
+
+<blockquote>
+  <p>examine the process of motivation and are concerned with ‘how’ motivation occurs.</p>
+</blockquote>
+
+<h3 id="victor-vrooms-expectancy-theory">Victor Vroom’s expectancy theory.</h3>
+
+<blockquote>
+  <p>Vroom argues that motivation depends on empoloyees’ expectations of the result of their efforts.</p>
+</blockquote>
+
+<p>Vroom’s model consists of three major elements:</p>
+
+<ul>
+  <li>Expeectancy: Confidence that employees may have in their ability to complete a particular task
+  Expectancy leads to better performance.</li>
+  <li>Instrumentality: Belief that completion of a particular task will lead to desired outcome.
+  Intrumentality leads to outcome/reward.</li>
+  <li>Valence: Strength of a person’s desire to achieve a specific outcome. It refers to personal objectives.</li>
+</ul>
+
+<h2 id="motivation-methods-in-practice">Motivation methods in practice</h2>
+
+<h3 id="financial-motivators">Financial motivators</h3>
+
+<ul>
+  <li>Taylor saw pay as the primary motivating factor for all workers and supporteed the use of piece rate</li>
+  <li>Maslow saw pay as a reward which permitted employees to meet the lower needs on their hierarchy</li>
+  <li>
+    <p>Herzberg saw pay as a hygiene factor and a possible cause of dissatisfaction</p>
+  </li>
+  <li><strong>Time based pay</strong>: Payments based on the number of hours worked. Simple but may lead employees becoming clock-watchers.</li>
+  <li><strong>Salary and wages</strong>: Salaried workers are not normally required to work a set number of hours, though their contract may state a minimum of number of hours.
+    <ul>
+      <li>Salaries: expressed in annual terms and paid monthly</li>
+      <li>Wages: usually paid weekly and workers are required to be at work for a specified number of hours. They are paid a higher rate for overtime.</li>
+    </ul>
+  </li>
+  <li><strong>Piece-rate</strong>: Employees are paid according to the quantity they produce. It may lead to increased productivity but may cause decrease in quality.</li>
+  <li><strong>Bonuses and commission</strong>: Bonuses are additions to pay linked to individual or team peerformancee measured against target. Commission is the payment for the quantity that is produced by an individual employee.</li>
+  <li><strong>Profit sharing</strong>: It is a reward system under which employees receive some part of the business’ profits. Profits are paid to employees in thee form of cash or company shares.</li>
+  <li><strong>Performance related pay(PRP)</strong>:  Under PRP, employees are paid for their contribution to the organization, rather than their status within it. The problem with PRP is performance is often difficult to measure, feeling of dicrimination, and businessees not putting sufficient funds.</li>
+  <li><strong>Variable pay</strong>: It is a more flexible schemee where potential rewards for star employees are greater.</li>
+  <li><strong>Fringe benefits</strong>: Extras that employees receive as part of their reward package. Sometimes referred to as perks.</li>
+</ul>
+
+<h3 id="non-financial-motivators">Non-financial motivators</h3>
+
+<ul>
+  <li><strong>Job redesign</strong>:
+    <ul>
+      <li>Job enrichment occurs when employees’ jobs are redesined to provide then with more challenging and complex tasks, which is also called vertical loading. Job enlargement, also called horizonal loading, increases number of similar task instead of increasing complexity of task.</li>
+    </ul>
+  </li>
+  <li><strong>Employee empowerment</strong> : providing greater control over their work life.</li>
+  <li><strong>Teamworking</strong>: Breaking producttion into large units insted of relying on division of labour.</li>
+  <li><strong>Training and development</strong></li>
+  <li><strong>Employee participation</strong>: Involvement of employees in process of decision making. It can be done in form of quality circles, work councils, employee shareholders, and autonomous work groups.</li>
+  <li><strong>Promotion and status</strong></li>
+</ul>
+
+<hr />
+
+<h1 id="management">Management</h1>
+
+<blockquote>
+  <p>Management is planning, organizing, directing and controlling all or part of a business interprise.</p>
+</blockquote>
+
+<h2 id="functions-of-management">Functions of management</h2>
+
+<ul>
+  <li>The four principal functions of management are:
+    <ul>
+      <li>Planning</li>
+      <li>Organizing</li>
+      <li>Directing</li>
+      <li>Controlling</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="planning">Planning:</h3>
+
+<blockquote>
+  <p>Evaluating the company’s current status and where it would like to be in the future.</p>
+</blockquote>
+
+<ul>
+  <li>establishing objectives or targets</li>
+  <li>gathering forecasts of key data</li>
+  <li>making plans for functional areas</li>
+  <li>estimating the likely resources needs</li>
+</ul>
+
+<h3 id="organizing">Organizing</h3>
+
+<blockquote>
+  <p>Determining the internal organizational structure, establishing and maintaining relationship, as well as allocating necessary resources.</p>
+</blockquote>
+
+<h3 id="directing">Directing</h3>
+
+<blockquote>
+  <p>Motivating and communicating</p>
+</blockquote>
+
+<h3 id="controlling">Controlling</h3>
+
+<blockquote>
+  <p>Setting standards using the company’s objectives and evaluating and reporting performance.</p>
+</blockquote>
+
+<h2 id="henri-fayols-theories-of-management">Henri Fayol’s theories of management</h2>
+
+<blockquote>
+  <p>Henri Fayol was a French mining engineer who developed a theory of business administration.</p>
+</blockquote>
+
+<ul>
+  <li>He established fourteen key principles of maagement and five primary functions which supported his fourteen principles.</li>
+</ul>
+
+<h3 id="fayols-fourteen-principles">Fayol’s fourteen principles</h3>
+
+<ul>
+  <li>Division of work</li>
+  <li>Authority</li>
+  <li>Discipline</li>
+  <li>Unity of command</li>
+  <li>Unity of direction</li>
+  <li>Subordination of individual interests to the general interest</li>
+  <li>Remuneration</li>
+  <li>Centralization</li>
+  <li>Scalar chain</li>
+  <li>Order</li>
+  <li>Equity</li>
+  <li>Stability of tenure of personnel</li>
+  <li>Initiative</li>
+  <li><em>Esprit de corps</em>: Team spirit</li>
+</ul>
+
+<h3 id="fayols-functions-of-management">Fayol’s functions of management</h3>
+
+<ul>
+  <li>Planning</li>
+  <li>Organising</li>
+  <li>Commanding</li>
+  <li>Co-ordinating</li>
+  <li>Controlling</li>
+</ul>
+
+<h2 id="mintzbergs-roles-of-management">Mintzberg’s roles of management</h2>
+
+<blockquote>
+  <p>Ten roles, three categories</p>
+</blockquote>
+
+<ul>
+  <li>Interpersonal management
+    <ul>
+      <li>Figurehead: represent their colleagues.</li>
+      <li>Leader</li>
+      <li>Liaison: Communicate with internal and external contacts.</li>
+    </ul>
+  </li>
+  <li>Informational management
+    <ul>
+      <li>Monitor: Search for relevant information.</li>
+      <li>Disseminator: pass on valuable information to others in the organization.</li>
+      <li>Spokesperson: Represents and speaks for their organization.</li>
+    </ul>
+  </li>
+  <li>Decisional management
+    <ul>
+      <li>Entrepreneur: plan and initiate change.</li>
+      <li>Disturbance handler: Deal with unexpected and crisis.</li>
+      <li>Resource allocator</li>
+      <li>Negotiator</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="contribution-of-managers-to-business-performance">Contribution of managers to business performance</h2>
+
+<ul>
+  <li>Some are:
+    <ul>
+      <li>Setting suitable objectives</li>
+      <li>Allowing subordinates to work to their full potential</li>
+      <li>Making good quality decisions</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="styles-of-management">Styles of management</h2>
+
+<ul>
+  <li>Based on how much managers <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>listen to
+</pre></td></tr></tbody></table></code> their staff:
+    <ul>
+      <li>Autocratic: managers control information and make decisions alone.</li>
+      <li>Paternalistic: Managers take decisions in what they believe are the best interests of their subordinates.</li>
+      <li>Democratic: Information is shared and team members participate in decision-making.</li>
+      <li>Laissez-faire: Subordinats are free to make their own decisions.</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>There is not a single perfect style of management. Best managers adopt a style suitable to the circumstance.</p>
+</blockquote>
+
+<h2 id="douglas-mcgregors-theory-x-and-theory-y">Douglas McGregor’s Theory X and Theory Y</h2>
+
+<blockquote>
+  <p>He classified managers into two categories based on what they believed.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>Theory X managers believe workers were motivated solely by money and had no real desire to work.</p>
+  </li>
+  <li>
+    <p>Theory Y managers believe that workers seek satisfaction from employment and not just money, wish to contribute,and willing to commit.</p>
+  </li>
+  <li>
+    <p>McGregor did not believe in the views expressed by Theory X managers.</p>
+  </li>
+</ul>
+
+<hr />
+
+
+      </article>
+    </div>
+  </main>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script>
+    function generatePDF() {
+      const element = document.getElementById('content-to-pdf');
+      const opt = {
+        margin:       0.1,
+        filename:     'document.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+      html2pdf().from(element).set(opt).save();
+    }
+</script>
+
+<style>
+/* Base markdown styles */
+.markdown-body {
+  color: #24292e;
+  background-color: transparent;
+}
+
+.dark .markdown-body {
+  color: #c9d1d9;
+}
+
+/* Table styles */
+.markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background-color: transparent;
+}
+
+.dark .markdown-body table th,
+.dark .markdown-body table td {
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+.markdown-body table tr:nth-child(even) td {
+  background-color: #f9fafb;
+}
+
+.markdown-body table tr:nth-child(odd) td {
+  background-color: #ffffff;
+}
+
+.dark .markdown-body table tr:nth-child(even) td {
+  background-color: #4b4c4d;
+}
+
+.dark .markdown-body table tr:nth-child(odd) td {
+  background-color: #8a8282;
+}
+
+.markdown-body table th {
+  background-color: #f3f4f6;
+}
+
+.dark .markdown-body table th {
+  background-color: #374151;
+}
+
+/* Force list styles in markdown content */
+.markdown-body ul {
+  list-style-type: disc !important;
+  padding-left: 2em !important;
+}
+
+.markdown-body ol {
+  list-style-type: decimal !important;
+  padding-left: 2em !important;
+}
+
+/* Ensure proper text colors in dark mode */
+.dark .prose {
+  --tw-prose-body: #e5e7eb;
+  --tw-prose-headings: #f3f4f6;
+  --tw-prose-lead: #d1d5db;
+  --tw-prose-links: #60a5fa;
+  --tw-prose-bold: #f3f4f6;
+  --tw-prose-counters: #9ca3af;
+  --tw-prose-bullets: #9ca3af;
+  --tw-prose-hr: #374151;
+  --tw-prose-quotes: #f3f4f6;
+  --tw-prose-quote-borders: #374151;
+  --tw-prose-captions: #9ca3af;
+  --tw-prose-code: #f3f4f6;
+  --tw-prose-pre-code: #e5e7eb;
+  --tw-prose-pre-bg: #1f2937;
+  --tw-prose-th-borders: #374151;
+  --tw-prose-td-borders: #374151;
+}
+
+/* Mobile dropdown styles */
+#mobile-nav {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+.dark #mobile-nav {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+}
+
+/* Additional dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+  .markdown-body {
+    color-scheme: dark;
+  }
+}
+</style>
+  </main>
+
+  <script>
+    // Theme toggle
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+
+    function updateThemeIcon(isDark) {
+        themeIcon.innerHTML = isDark 
+            ? '<path fill="blue" d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>'
+            : '<path fill="yellow" fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>';
+    }
+
+    // Initialize the icon on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        const isDark = html.classList.contains('dark');
+        updateThemeIcon(isDark);
+    });
+    
+    themeToggle.addEventListener('click', () => {
+        event.preventDefault();
+        const isDark = html.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeIcon(html.classList.contains('dark'));
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const menuIcon = document.getElementById('menuIcon');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('hidden');
+        menuIcon.innerHTML = isOpen
+            ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"/>'
+            : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+    });
+
+    // Mobile dropdowns
+    function toggleDropdown(button) {
+        const dropdown = button.nextElementSibling;
+        const arrow = button.querySelector('svg');
+        dropdown.classList.toggle('hidden');
+        arrow.style.transform = dropdown.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+    }
+</script>
+</body>
+</html>

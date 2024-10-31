@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    {% include components/head.html %}
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-primary transition-colors duration-200 min-h-screen flex flex-col">
+  {% include components/navbar.html %}
+  
+  <main class="container mx-auto px-4 py-8 flex-grow flex items-center justify-center w-full">
+      {{ content }}
+  </main>
+
+  {% include components/scripts.html %}
+</body>
+</html>

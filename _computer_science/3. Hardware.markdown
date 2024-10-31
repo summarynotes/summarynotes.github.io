@@ -1,0 +1,132 @@
+---
+layout: note
+title: 3. Hardware
+subject: computer_science
+---
+<u><b>Chapter 3: Hardware</b></u>
+
+Computer has following function:
+- Data Processing (done by ALU)
+- Data Storage
+- Data Movement
+- Control (done by CU)
+
+<hr>
+
+**Data Storage**:
+
+Memory can store data and instruction.
+- Primary memory can communicate directly with CPU.
+- Secondary memory provides backup storage and is also called auxiliary memeory.
+
+<hr>
+
+**Memory hierarchy**
+
+Memory hierarchy system consists of all storage devices used in computer system from slow but high-capacity auxiliary memory to a relatively faster cache memory accessible to high-speed processing logic.
+
+- Goal => obtain highest-possible average access speed while minimizing the total cost of the entire memory system.
+
+![memory_hierarchy](../img/memory_hierarchy.png)
+
+As we go doewn the hierarchy: cost per bit decreases, capacity increases, access time increases, frequency of access of memory by processor also decreases.
+
+- Magnetic tape(auxiliary memory) is generally used for archiving.
+
+<hr>
+
+**Embedded system**
+
+An embedded system is a system in which computer (generally microcontroller or
+microprocessor) is included as an integral part of the system. Embedded system can be
+thought of as special-purpose computer that generally performs only a single function.
+For e.g.: AC, fridge etc. have embedded system.
+Memory can store data and instruction.
+
+Embedded systems can have network connectivity which allows them to be part of IOT.
+
+<hr>
+
+**Memory Components**
+
+Main memory is made up of <u>RAM(Random-access-Memory)</u>. The name has been
+chosen because such memory can be accessed at any location. (i.e., not necessarily
+sequentially). Other suitable terms: direct-access memory, read-write memory.
+
+- RAM is volatile, which means its contents are lost when computer is switched off.
+
+- Types of RAM:
+    - *DRAM(Dynamic RAM)*: made up of capacitors and transistors which can leak electtricity and needs to be refreshed(recharged) regularly (every few milliseconds).
+    - *SRAM(Static RAM)*: made up of flip-flops that continue to store data indefinitely while the computer system is switched on.
+
+- DRAM require fewer components per bit stored which makes it cheaper and compact but SRAM is faster(shorter access time) and larger.
+
+- Normally, DRAM is used for main memory and SRAM is used for cache.
+
+- <u>ROM(Read Only Memory)</u> share random-access feature of RAM too but it cannot be written to when in use within the computer system. They are non-volatile.
+> This is traditional definition of ROM and doesn't really hold true for newer types of ROM.
+
+- Types of ROM:
+    - ROM
+    - PROM
+    - EPROM
+    - EEPROM
+
+- <u>Buffers</u>: temporary storage device that stores data during transfer between devices with different speed.
+
+<hr>
+
+**Secondary Storage Device**:
+
+- <u>Magnetic medias(use magnetism)</u>
+    - Magnetic tapes were first storage devices that were used before computers for sound recording.
+    - Hard disk was invented for computer storage.
+    - Read head uses the law: State of magnetization will affect an electrical property and write head uses the reverse property. States of magnetization are interpreted as a 1 or 0.
+    - Cylinder is collection of tracks. Same tracks on different platter have related data for faster access.
+    - As you add and remove files, disc can become increasingly fragmented. (Defragmentation program can reorganize the allocation of sectors to files to restore peformance)
+
+![hard_drive](../img/hard_drive.png)
+
+- <u>Optical media(Uses light(infrared laser))</u>
+    - Used for software distribution. Initially, read only(CD-ROM). Later, CD-RW. Then, DVD and BD(Blu-ray disc).
+    - Disc spins. There are pits and lands on disc surface that reflect from the surface differently. Shorter wavelength and higher speed of rotation => higher storage and faster.
+![optical_storage](../img/optical_storage.png)
+
+- <u>Solid-state media(Semiconductor logic gates)</u>
+    - No moving parts. There are blocks of cell taht can be erased or written to. Block consists of pages of memory. Single page can be read in one operation.
+
+<hr>
+
+**Input/Output devices**:
+
+- <u>Screen display</u>:
+    - CRT(Cathode Ray Tube): Contains surfacee covered with phosphor which emits light when electron beam (cathode rays) fall on it. (Individual color phosphors for color display).
+    - LCD(Liquid Crystal display): Has individual cells with liquid crystal to create each pixel. Pixel matrix is illuminated by back lighting and each pixel is aligned with voltage which affects transmission of light.
+    - LED(Light emitting diodes): are made up of light emitting diodes.
+
+- <u>Virtual reality headset</u>:
+    - Two eye-pieces with different images which when looked at give 3D sensation.
+    - Consists of sensors for finding out orientation.
+
+- <u>Hard copy text output</u>:
+    - Inkjet printer has printhead that has nozzles to spray droplets on paper.
+    - Laser printer has drums which are charged. Drum revolves and laser discharges portion of drum. Similarly charged toner attaches to discharged portion and drum is pressed on paper which is fused using heated rollers.
+
+- <u>Keyboard</u>: Pressing causes contact at part points where wire crosses on key
+matrix which consists of rows and columns of wire. Processor identifies
+intersection. ROM contains data to identify character code.
+
+- <u>Touch screen</u> are of two types:
+    - Resistive touch screen consists of two layers separated by a thin space that touch when pressed. This creates voltage divider in horizontal and vertical direction.
+    - Capacitive touch screen use fact that finger touching a glass screen can cause a capacitance change in a circuit component immediately below the screen.
+
+- <u>Graphical input</u>:
+    - Scanner has mirrors and lenses that direct light to a charge coupled device (CCD) that consist of an array of photo-sensitive cells, that produce electrical response proportional to the light intensity which is converted by analogue-to-digital converter.
+
+- <u>Microphone</u>:
+    - has diaphragm (flexible material) that is vibrated by incoming sound. A circuit changes vibration to electric signal. A condenser microphone uses capacitor change as mechanism; alternative is piezoelectric crystal. ADC is used too.
+
+- <u>Speaker</u>:
+    - is reverse of microphone. Current in coil causes it to vibrate in a magnetic field.
+
+---

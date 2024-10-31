@@ -1,0 +1,91 @@
+---
+layout: default
+title: Home
+description: Welcome to A Level Notes - Your study companion
+---
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Hero Section -->
+    <div class="text-center mb-16">
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Welcome
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300">
+            Let's do this
+        </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <!-- Notes Card -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+            <div class="bg-blue-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+            </div>
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Study Notes</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Access comprehensive study materials covering all major topics
+            </p>
+            <a href="/notes" class="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
+                Browse Notes →
+            </a>
+        </div>
+
+        <!-- Practice Tests Card -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+            <div class="bg-green-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+            </div>
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Practice Tests</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Test your knowledge with our practice exams and quizzes
+            </p>
+            <a href="/tests" class="text-green-500 hover:text-green-600 dark:hover:text-green-400">
+                Start Testing →
+            </a>
+        </div>
+
+        <!-- Contact Card -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+            <div class="bg-purple-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+            </div>
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Get in Touch</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Want to contribute or have suggestions? Reach out to me.
+            </p>
+            <a href="/contact" class="text-purple-500 hover:text-purple-600 dark:hover:text-purple-400">
+                Contact →
+            </a>
+        </div>
+    </div>
+
+    <!-- Latest Updates Section
+    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Latest Updates</h2>
+        <div class="space-y-4">
+            {% for post in site.posts limit:3 %}
+            <div class="border-l-4 border-blue-500 pl-4">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                    {{ post.title }}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">
+                    {{ post.date | date: "%B %d, %Y" }}
+                </p>
+                <p class="text-gray-600 dark:text-gray-300 mt-2">
+                    {{ post.excerpt | strip_html | truncatewords: 30 }}
+                </p>
+                <a href="{{ post.url }}" class="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 text-sm">
+                    Read more →
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div> -->
+</div>

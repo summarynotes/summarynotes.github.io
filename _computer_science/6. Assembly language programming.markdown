@@ -1,0 +1,85 @@
+---
+layout: note
+title: 6. Assembly language programming
+subject: computer_science
+---
+<u><b>Chapter 6: Assembly language programming</b></u>
+
+## Machine code instructions
+
+- Parts:
+    - Opcode: what to do
+    - operand: with what
+
+![instruction](../img/instruction.png)
+
+## Assembly language and Assembler
+
+> You could write program in machine level and it could be efficient program but not human compatible. So, we use Assembly language which uses mnemonics and characters.
+
+- *Assembler* converts assembly language to machine code before it is executed by processor.
+
+- Assembler also allows programmer to include:
+```markdown
+- comments
+- symbolic names for constants
+- labels for addresses
+- macros: sequence of instructions that can be reused. (like functions)
+- directtives: instruction for assembler
+```
+
+- Assember does many things:
+    - Remove comments
+    - replace macro name with actual instructions
+    - removal and storage of directives
+    - actual conversion
+
+- One pass assembler:
+    - Converts complete code in one round. i.e. goes through the program once.
+
+- Two pass assembler:
+    - Useful for programs with forward reference
+    - First pass: finds location of addresses for the forward reference to construct symbol table.
+    - Second pass: assembler uses symbol name and lookup table to output machine code.
+
+## Addressing modes
+
+> Addressing mode is the way of specifying value to be used by operation.
+
+![addressing](../img/addressing.png)
+
+- For immediate addressing, you can provide value in denary, binary or hexadecimal.
+
+![immediate](../img/immediate.png)
+
+## Assembly language instructions:
+
+- Types:
+    - Data movement: LDM, MOV, STO
+    - Input and Output: IN, OUT
+    - Comparisons and jumps: JMP, CMP
+    - Arithmetic operations: ADD, SUB, INC, DEC
+    - Shifting operations:
+        - Logical: LSL, LSR
+        - Arithmetic
+
+> In logical left shift, the most significant bit is moved to the carry bit, the remaining bit are shifted left and a zero is entered for the least significant bit.
+
+> In cyclic left shift, the bit from most significant position goes to least significant position.
+
+> In arithmetic shift, sign is preserved and rest is like cyclic.
+
+## Flags
+
+> Flags are bits in status register. 
+
+- Carry flag(C): set to 1 if there is carry following an addition operation.
+- Negative flag(N): set to 1 if the results of a calculation gives negative value.
+- Overflow flag(V): set to 1 if there is overflow.
+- Zero flag(Z): set to one if result is zero.
+
+- Others: parity, interrupt, half-carry.
+
+![flags](../img/flags.png)
+
+---

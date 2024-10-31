@@ -1,0 +1,20 @@
+---
+layout: note
+title: 4. Logic gates and logic circuits
+subject: computer_science
+---
+<u><b>Chapter 4: Logic gates and logic circuits</b></u>
+
+## Terms:
+
+- Logic proposition/assertion: Statement that can be either TRUE or FALSE.
+- Boolean variables can be either TRUE or FALSE.
+- Logic gates are circuits that work with Boolean values.
+- Logic circuits are combination of logic gates.
+- Truth tables show relation between input and output of logic circuits.
+
+## Boolean Operators and symbols and logic gates:
+
+![boolean](../img/boolean.png)
+
+---
