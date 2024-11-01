@@ -1,6 +1,6 @@
 ---
 layout: note
-title: Human Resource Management
+title: 2. Human resource management
 subject: business 
 ---
 <center><b><h1>Human Resource Management</h1></b></center>

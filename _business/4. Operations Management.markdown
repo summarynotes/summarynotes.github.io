@@ -1,6 +1,6 @@
 ---
 layout: note
-title: Operations management
+title: 4. Operations management
 subject: business 
 ---
 <center><h1><b> Operations management </b></h1></center>

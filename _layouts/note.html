@@ -16,7 +16,7 @@ layout: default
       {% endfor %}
     </select>
         <button 
-        onclick="generatePDF()" 
+        onclick="generatePDF('{{ page.title }}')" 
         class="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-900 dark:bg-gray-700 text-white rounded-md hover:bg-gray-700 hover:dark:bg-gray-600 transition-colors duration-200 shadow-lg"
         aria-label="Download PDF"
         >
@@ -74,7 +74,7 @@ layout: default
       </div>
       <div class="flex justify-center mt-4">
         <button 
-          onclick="generatePDF()" 
+          onclick="generatePDF('{{ page.title }}')" 
           class="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-900 dark:bg-gray-700 text-white rounded-md hover:bg-gray-700 hover:dark:bg-gray-600 transition-colors duration-200 shadow-lg w-[80%]"
           aria-label="Download PDF"
         >
@@ -108,17 +108,40 @@ layout: default
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <script>
-    function generatePDF() {
-      const element = document.getElementById('content-to-pdf');
-      const opt = {
-        margin:       0.1,
-        filename:     'document.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2 },
-        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-      };
-      html2pdf().from(element).set(opt).save();
+async function generatePDF(name) {
+  // Construct the PDF path based on the current page's URL
+  const subject = window.location.pathname.split('/')[2];
+  const pdfPath = `/_${subject}/pdf/${name}.pdf`;
+  console.log(pdfPath);
+  try {
+    // Check if the PDF file exists
+    const response = await fetch(pdfPath, { method: 'HEAD' });
+    console.log(response);
+    if (response.ok) {
+      // If the file exists, download it
+      const link = document.createElement('a');
+      link.href = pdfPath;
+      link.download = `${name}.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      return;
     }
+  } catch (error) {
+    console.error('Error checking PDF file:', error);
+  }
+
+  // If the file does not exist, generate the PDF
+  const element = document.getElementById('content-to-pdf');
+  const opt = {
+    margin: 0.1,
+    filename: `${name}.pdf`,
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+  };
+  html2pdf().from(element).set(opt).save();
+}
 </script>
 
 <style>
