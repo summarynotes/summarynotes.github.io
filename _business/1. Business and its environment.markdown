@@ -201,7 +201,7 @@ subject: business
 ## Business ownership
 
 - Sole traders:
-    - When individuals run a business of their own, they are known as `sole traders`.
+    - When individuals run a business of their own, they are known as *sole traders*.
     - Most entrepreneurs start as sole traders or in partnership.
     - Plumbers, decorators, window cleaners and hairdressers are often sole traders.
 

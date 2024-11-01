@@ -1,0 +1,20 @@
+# Jekyll specific files and directories
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Logs and system files
+.DS_Store
+*.log
+*.tmp
+
+# Generated assets
+assets/img/generated/
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Extra files
+rough.txt
