@@ -24,11 +24,13 @@ subject: computer_science
 > Enumerated data types are user-defined non-composite data type.
 
 - Example of declaration
+
 ```markdown
 TYPE TDirections = (North, East, South, West)
 ```
 
 - Instantiation
+
 ```markdown
 DECLARE Direction1 : TDirections
 Direction1 ← North
@@ -41,6 +43,7 @@ Direction1 ← North
 > Records are user-defined composite data type.
 
 - Example of definition and declaration
+
 ```markdown
 TYPE Student
     DECLARE StudentId : INTEGER
@@ -51,6 +54,7 @@ DECLARE Ram : Student
 ```
 
 - Operations
+
 ```markdown
 Ram.StudentId <- "10A1"
 Ram.Name <- "Ram"

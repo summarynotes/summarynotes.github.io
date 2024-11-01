@@ -24,7 +24,7 @@ collections:
     permalink: /notes/mathematics/:path/
   computer_science:
     output: true
-    permalink: /notes/computer-science/:path/
+    permalink: /notes/computer_science/:path/
 
 include:
   - _business

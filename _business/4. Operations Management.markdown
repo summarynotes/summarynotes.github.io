@@ -1,9 +1,9 @@
 ---
 layout: note
-title: 4. Operations management
+title: 4. Operations Management
 subject: business 
 ---
-<center><h1><b> Operations management </b></h1></center>
+<center><h1><b> Operations Management </b></h1></center>
 
 # The nature of operations
 
