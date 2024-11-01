@@ -1,6 +1,6 @@
 ---
 layout: note
-title: Finance and Accounting
+title: 5. Finance and Accounting
 subject: business
 ---
 <center><h1>Finance and Accounting</h1></center>

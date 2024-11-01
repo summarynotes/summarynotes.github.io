@@ -1,9 +1,9 @@
 ---
 layout: note
-title: Business and its structure
+title: 1. Business and its environment
 subject: business
 ---
-<center><b><h1>Business and its structure</h1></b></center>
+<center><b><h1>Business and its environment</h1></b></center>
 
 # Enterprise
 

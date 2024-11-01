@@ -1,5 +1,5 @@
 ---
-title: The nature of marketing
+title: 3. Marketing
 subject: business 
 layout: note
 ---
