@@ -25,6 +25,18 @@ collections:
   computer_science:
     output: true
     permalink: /notes/computer_science/:path/
+  test_subjects: # Test collections from here
+    output: true
+    permalink: /tests/:path/
+  business_test:
+    output: true
+    permalink: /tests/business/:path/
+  mathematics_test:
+    output: true
+    permalink: /tests/mathematics/:path/
+  computer_science_test:
+    output: true
+    permalink: /tests/computer_science/:path/
 
 include:
   - _business

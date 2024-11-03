@@ -39,17 +39,18 @@ layout: default
     </div>
 
     <div class="mb-12">
-        {% assign collection = site[subject] %}
+        {% assign test_subject = subject | append: "_test" %}
+        {% assign collection = site[test_subject] %}
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {% if collection.size > 0 %}
-                {% for chapter in collection %}
-                    <a href="{{ chapter.url }}" class="group block">
+                {% for test in collection %}
+                    <a href="{{ test.url }}" class="group block">
                         <div class="h-full p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-1">
                             <div class="flex items-center justify-between">
                                 <div class="flex-1">
                                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
-                                        {{ chapter.title }}
+                                        {{ test.title }}
                                     </h3>
                                 </div>
                                 <!-- <div class="ml-4">
@@ -67,8 +68,8 @@ layout: default
                         <svg class="w-12 h-12 text-gray-400 dark:text-gray-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                         </svg>
-                        <p class="text-gray-600 dark:text-gray-400 text-lg font-medium">No chapters found</p>
-                        <p class="text-gray-500 dark:text-gray-500 text-sm mt-1">Check back later for new content</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg font-medium">No tests found</p>
+                        <p class="text-gray-500 dark:text-gray-500 text-sm mt-1">Check back later</p>
                     </div>
                 </div>
             {% endif %}

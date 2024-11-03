@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div class="mb-12">
+        {% assign subject = page.subject %}
+        {% assign subject_slug = subject.title | slugify %}
+    
+    {% assign banner_image_jpg = "/assets/img/subjects/" | append: subject | append: "_banner.jpg" %}
+    {% assign icon_image_svg = "/assets/img/subjects/" | append: subject | append: "_icon.svg" %}
+    
+    {% assign banner_exists = false %}
+    {% assign icon_exists = false %}
+    
+    {% for static_file in site.static_files %}
+      {% if static_file.path == banner_image_jpg %}
+        {% assign banner_exists = true %}
+      {% endif %}
+      {% if static_file.path == icon_image_svg %}
+        {% assign icon_exists = true %}
+      {% endif %}
+    {% endfor %}
+        
+        {% if banner_exists %}
+            <img src="{{ banner_image_jpg }}" alt="{{ subject | capitalize }} Banner" class="w-full h-48 object-cover rounded-lg shadow-lg mb-4">
+        {% else %}
+            <img src="/assets/img/subjects/default_banner.jpg" alt="Default Banner" class="w-full h-48 object-cover rounded-lg shadow-lg mb-4">
+        {% endif %}
+        
+        <div class="flex items-center gap-4 mb-6">
+            {% if icon_exists %}
+                <img src="{{ icon_image_svg }}" alt="{{ subject | capitalize }} Icon" class="w-12 h-12">
+            {% else %}
+                <img src="/assets/img/subjects/default_icon.svg" alt="Default Icon" class="w-12 h-12">
+            {% endif %}
+            <h1 class="text-xl md:text-2xl lg:text-3xl font-extrabold capitalize text-gray-800 dark:text-gray-100">{{ subject | replace: '_', ' ' }}</h1>
+        </div>
+    </div>
+
+    <div class="mb-12">
+        {% assign collection = site[subject] %}
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% if collection.size > 0 %}
+                {% for chapter in collection %}
+                    <a href="{{ chapter.url }}" class="group block">
+                        <div class="h-full p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                            <div class="flex items-center justify-between">
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                                        {{ chapter.title }}
+                                    </h3>
+                                </div>
+                                <!-- <div class="ml-4">
+                                    <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </div> -->
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            {% else %}
+                <div class="col-span-full">
+                    <div class="flex flex-col items-center justify-center p-12 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700">
+                        <svg class="w-12 h-12 text-gray-400 dark:text-gray-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg font-medium">No notes found</p>
+                        <p class="text-gray-500 dark:text-gray-500 text-sm mt-1">Check back later</p>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
