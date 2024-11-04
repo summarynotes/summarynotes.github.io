@@ -39,8 +39,9 @@ layout: default
     </div>
 
     <div class="mb-12">
-        {% assign test_subject = subject | append: "_test" %}
-        {% assign collection = site[test_subject] %}
+        {% assign collection = site.tests %}
+        {% assign subject = page.subject %}
+        {% assign collection = collection | where: "subject", subject %}
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {% if collection.size > 0 %}

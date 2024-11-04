@@ -8,8 +8,9 @@ layout: default
             <div class="flex items-center space-x-4">
             <select id="mobile-nav" onchange="window.location.href=this.value" class="w-full p-2 rounded-lg bg-[{{ site.data.colors.highlight_dark }}] dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600">
                 <option value="">Select Chapter</option>
-                {% assign test_subject = page.subject | append : "_test" %}
-                {% assign collection = site[test_subject] %}
+                {% assign collection = site.tests %}
+                {% assign subject = page.subject %}
+                {% assign collection = collection | where: "subject", subject %}
                 {% for chapter in collection %}
       <option value="{{ chapter.url }}" {% if page.url == chapter.url %}selected{% endif %}>
         {{ chapter.title }}
@@ -40,13 +41,13 @@ layout: default
     <div class="flex-col space-y-2">
       <div class="h-full px-3 py-4">
         <div class="mb-4">
+          {% assign collection = site.tests %}
           {% assign subject = page.subject %}
-          {% assign test_subject = subject | append : "_test" %}
           <h2 class="px-4 text-lg font-semibold text-gray-900 dark:text-white">
-              {{ subject | capitalize }}
-            </h2>
+            {{ subject | capitalize }}
+          </h2>
         </div>
-        {% assign collection = site[test_subject] %}
+        {% assign collection = collection | where: "subject", subject %}
         {% if collection.size > 0 %}
         <div class="space-y-1">
           {% for chapter in collection %}
@@ -113,7 +114,7 @@ layout: default
 async function generatePDF(name) {
   // Construct the PDF path based on the current page's URL
   const subject = window.location.pathname.split('/')[2];
-  const pdfPath = `/_${subject}_test/pdf/${name}.pdf`;
+  const pdfPath = `/_tests/${subject}/pdf/${name}.pdf`;
   console.log(pdfPath);
   try {
     // Check if the PDF file exists

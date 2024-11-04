@@ -104,7 +104,7 @@
           <div
             class="absolute right-0 mt-2 w-48 bg-[{{ site.data.colors.highlight }}] dark:bg-gray-800 rounded-lg shadow-lg py-0 z-50 transition-all duration-200 transform opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100 group-hover:visible overflow-hidden"
           >
-          {% assign subjects_collection = site.subjects %}
+          {% assign subjects_collection = site.notes_subjects %}
             {% if subjects_collection.size > 0 %}
               {% for subject in subjects_collection %}
                 <a
@@ -143,7 +143,7 @@
           <div
             class="absolute right-0 mt-2 w-48 bg-[{{ site.data.colors.highlight }}] dark:bg-gray-800 rounded-lg shadow-lg py-0 z-50 transition-all duration-200 transform opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100 group-hover:visible overflow-hidden"
           >
-          {% assign subjects_collection = site.subjects %}
+          {% assign subjects_collection = site.test_subjects %}
             {% if subjects_collection.size > 0 %}
               {% for subject in subjects_collection %}
                 <a
@@ -225,7 +225,7 @@
           </svg>
         </button>
         <div class="mt-2 bg-[{{ site.data.colors.navbar_dark }}] dark:bg-gray-800 rounded-lg shadow-lg hidden">
-          {% assign subjects_collection = site.subjects %}
+          {% assign subjects_collection = site.notes_subjects %}
             {% if subjects_collection.size > 0 %}
               {% for subject in subjects_collection %}
                 <a
@@ -263,7 +263,7 @@
           </svg>
         </button>
         <div class="mt-2 bg-[{{ site.data.colors.navbar_dark }}] dark:bg-gray-800 rounded-lg shadow-lg hidden">
-          {% assign subjects_collection = site.subjects %}
+          {% assign subjects_collection = site.test_subjects %}
             {% if subjects_collection.size > 0 %}
               {% for subject in subjects_collection %}
                 <a

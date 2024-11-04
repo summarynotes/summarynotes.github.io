@@ -188,7 +188,7 @@ c17 37 57 94 87 128 30 34 55 66 55 71 0 5 -17 12 -37 15 -198 30 -278 59
 
   <!-- Subjects Grid -->
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    {% assign subjects_list = site.subjects %}
+    {% assign subjects_list = site.test_subjects %}
     {% for subject in subjects_list %}
     {% assign subject_slug = subject.title | slugify %}
     
