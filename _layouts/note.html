@@ -4,10 +4,10 @@ layout: default
 <div class="flex flex-col lg:flex-row min-h-screen bg-[#f7ecd1] dark:bg-gray-900 py-12">
   <!-- Mobile Navigation Dropdown -->
     <div class="px-4 py-4">
-        <div class="lg:hidden p-4 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 rounded-lg">
+        <div class="lg:hidden p-4 bg-[#e7dcb9] dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 rounded-lg">
             <div class="flex items-center space-x-4">
-            <select id="mobile-nav" onchange="window.location.href=this.value" class="w-full p-2 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600">
-                <option value="">Select Chapter</option>
+            <select id="mobile-nav" onchange="window.location.href=this.value" class="w-full p-2 rounded-lg bg-[#e0c4a1] hover:bg-[#e0c4a1] dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600">
+                <option value=""  >Select Chapter</option>
                 {% assign collection = site[page.subject] %}
                 {% for chapter in collection %}
       <option value="{{ chapter.url }}" {% if page.url == chapter.url %}selected{% endif %}>
@@ -51,9 +51,9 @@ layout: default
           <a href="{{ chapter.url }}"
             class="flex items-center px-4 py-2 text-sm rounded-lg group
             {% if page.url == chapter.url %}
-            text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 font-medium
+            text-blue-600 dark:text-blue-400 bg-[#fdf6e3] dark:bg-blue-900/30 font-medium
             {% else %}
-            text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50
+            text-gray-700 dark:text-gray-300 hover:bg-[#fdf6e3] dark:hover:bg-gray-700/50
             {% endif %}">
             <span class="flex-1 whitespace-nowrap truncate">{{ chapter.title }}</span>
             {% if page.url == chapter.url %}

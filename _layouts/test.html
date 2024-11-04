@@ -53,9 +53,9 @@ layout: default
           <a href="{{ chapter.url }}"
             class="flex items-center px-4 py-2 text-sm rounded-lg group
             {% if page.url == chapter.url %}
-            text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 font-medium
+            text-blue-600 dark:text-blue-400 bg-[#fdf6e3] dark:bg-blue-900/30 font-medium
             {% else %}
-            text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50
+            text-gray-700 dark:text-gray-300 hover:bg-[#fdf6e3] dark:hover:bg-gray-700/50
             {% endif %}">
             <span class="flex-1 whitespace-nowrap truncate">{{ chapter.title }}</span>
             {% if page.url == chapter.url %}
