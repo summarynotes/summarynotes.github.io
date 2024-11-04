@@ -10,7 +10,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
 <circle cx="640" cy="640" r="640" fill="#ffffff"/>
 
 <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
+fill="{{ site.data.colors.black }}" stroke="none">
 <path d="M5990 12790 c-1784 -116 -3353 -926 -4541 -2345 -547 -653 -976
 -1463 -1209 -2282 -433 -1524 -272 -3181 452 -4627 313 -625 681 -1143 1163
 -1635 1016 -1038 2307 -1671 3775 -1850 318 -39 440 -46 800 -45 380 0 548 12

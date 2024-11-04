@@ -1,5 +1,5 @@
 <nav
-  class="border-b border-gray-200 dark:border-gray-700 transition-colors duration-200 fixed top-0 left-0 right-0 z-50 bg-[#ebdbb2] dark:bg-primary border-b border-gray-200 dark:border-gray-700 transition-colors duration-200"
+  class="border-b border-gray-200 dark:border-gray-700 transition-colors duration-200 fixed top-0 left-0 right-0 z-50 bg-[{{ site.data.colors.navbar_dark }}] dark:bg-primary border-b border-gray-200 dark:border-gray-700 transition-colors duration-200"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-16">
@@ -25,7 +25,7 @@
               </metadata>
               <g
                 transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                fill="#000000"
+                fill="{{ site.data.colors.black }}"
                 stroke="none"
               >
                 <path
@@ -56,7 +56,7 @@
         <!-- Theme Toggle -->
         <button
           id="themeToggle"
-          class="p-2 rounded-lg text-gray-500 hover:bg-[#f5e6c8] dark:text-gray-400 dark:hover:bg-gray-800 transition-colors duration-200"
+          class="p-2 rounded-lg text-gray-500 hover:bg-[{{ site.data.colors.highlight }}] dark:text-gray-400 dark:hover:bg-gray-800 transition-colors duration-200"
         >
           <svg
             class="w-6 h-6"
@@ -84,7 +84,7 @@
         <!-- Notes Dropdown -->
         <div class="relative group">
           <button
-            class="px-4 py-2 text-gray-700 hover:bg-[#e0c4a1] dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center gap-2"
+            class="px-4 py-2 text-gray-700 hover:bg-[{{ site.data.colors.highlight_dark }}] dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center gap-2"
           >
             Notes
             <svg
@@ -102,14 +102,14 @@
             </svg>
           </button>
           <div
-            class="absolute right-0 mt-2 w-48 bg-[#f5e6c8] dark:bg-gray-800 rounded-lg shadow-lg py-0 z-50 transition-all duration-200 transform opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100 group-hover:visible overflow-hidden"
+            class="absolute right-0 mt-2 w-48 bg-[{{ site.data.colors.highlight }}] dark:bg-gray-800 rounded-lg shadow-lg py-0 z-50 transition-all duration-200 transform opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100 group-hover:visible overflow-hidden"
           >
           {% assign subjects_collection = site.subjects %}
             {% if subjects_collection.size > 0 %}
               {% for subject in subjects_collection %}
                 <a
                   href="{{ subject.url }}"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#e0c4a1] hover:text-blue-600 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-[{{ site.data.colors.highlight_dark }}] hover:text-blue-600 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
                 >
                   {{ subject.title | replace: '-', ' ' | capitalize }}
                 </a>
@@ -123,7 +123,7 @@
         <!-- Tests Dropdown -->
         <div class="relative group">
           <button
-            class="px-4 py-2 text-gray-700 hover:bg-[#e0c4a1] dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center gap-2"
+            class="px-4 py-2 text-gray-700 hover:bg-[{{ site.data.colors.highlight_dark }}] dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center gap-2"
           >
             Tests
             <svg
@@ -141,14 +141,14 @@
             </svg>
           </button>
           <div
-            class="absolute right-0 mt-2 w-48 bg-[#f5e6c8] dark:bg-gray-800 rounded-lg shadow-lg py-0 z-50 transition-all duration-200 transform opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100 group-hover:visible overflow-hidden"
+            class="absolute right-0 mt-2 w-48 bg-[{{ site.data.colors.highlight }}] dark:bg-gray-800 rounded-lg shadow-lg py-0 z-50 transition-all duration-200 transform opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100 group-hover:visible overflow-hidden"
           >
           {% assign subjects_collection = site.subjects %}
             {% if subjects_collection.size > 0 %}
               {% for subject in subjects_collection %}
                 <a
                   href="/tests/{{ subject.subject }}"
-                  class="block px-4 py-2 text-sm hover:bg-[#e0c4a1] text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                  class="block px-4 py-2 text-sm hover:bg-[{{ site.data.colors.highlight_dark }}] text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
                 >
                   {{ subject.title | replace: '-', ' ' | capitalize }}
                 </a>
@@ -170,7 +170,7 @@
       <div class="md:hidden flex items-center">
         <button
           id="menuBtn"
-          class="p-2 rounded-lg text-gray-500 hover:bg-[#f5e6c8] dark:text-gray-400 dark:hover:bg-gray-800 transition-colors duration-200"
+          class="p-2 rounded-lg text-gray-500 hover:bg-[{{ site.data.colors.highlight }}] dark:text-gray-400 dark:hover:bg-gray-800 transition-colors duration-200"
         >
           <svg
             class="w-6 h-6"
@@ -193,13 +193,13 @@
 
   <!-- Mobile Navigation -->
   <div
-    class="hidden md:hidden bg-[#ebdbb2] dark:bg-primary border-b border-gray-200 dark:border-gray-700"
+    class="hidden md:hidden bg-[{{ site.data.colors.navbar_dark }}] dark:bg-primary border-b border-gray-200 dark:border-gray-700"
     id="mobileMenu"
   >
     <div class="px-2 py-3 space-y-1">
       <a
         href="{{ site.baseurl }}/"
-        class="block w-full px-4 py-2 text-left text-gray-700 hover:bg-[#e0c4a1] dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+        class="block w-full px-4 py-2 text-left text-gray-700 hover:bg-[{{ site.data.colors.highlight_dark }}] dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
         >Home</a
       >
 
@@ -207,7 +207,7 @@
       <div class="mobile-dropdown">
         <button
           onclick="this.nextElementSibling.classList.toggle('hidden')"
-          class="block w-full px-4 py-2 text-left rounded-lg text-gray-700 hover:bg-[#e0c4a1] dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center justify-between"
+          class="block w-full px-4 py-2 text-left rounded-lg text-gray-700 hover:bg-[{{ site.data.colors.highlight_dark }}] dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center justify-between"
         >
           Notes
           <svg
@@ -224,13 +224,13 @@
             />
           </svg>
         </button>
-        <div class="mt-2 bg-[#ebdbb2] dark:bg-gray-800 rounded-lg shadow-lg hidden">
+        <div class="mt-2 bg-[{{ site.data.colors.navbar_dark }}] dark:bg-gray-800 rounded-lg shadow-lg hidden">
           {% assign subjects_collection = site.subjects %}
             {% if subjects_collection.size > 0 %}
               {% for subject in subjects_collection %}
                 <a
                   href="{{ subject.url }}"
-                  class="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-[#e0c4a1] dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                  class="block px-4 py-2 text-sm rounded-lg text-gray-700 hover:bg-[{{ site.data.colors.highlight_dark }}] dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
                 >
                   {{ subject.title | replace: '-', ' ' | capitalize }}
                 </a>
@@ -245,7 +245,7 @@
       <div class="mobile-dropdown">
         <button
           onclick="this.nextElementSibling.classList.toggle('hidden')"
-          class="block w-full px-4 py-2 text-left text-gray-700 hover:bg-[#e0c4a1] dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center justify-between"
+          class="block w-full px-4 py-2 text-left text-gray-700 hover:bg-[{{ site.data.colors.highlight_dark }}] dark:bg-primary dark:text-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 flex items-center justify-between"
         >
           Tests
           <svg
@@ -262,13 +262,13 @@
             />
           </svg>
         </button>
-        <div class="mt-2 bg-[#ebdbb2] dark:bg-gray-800 rounded-lg shadow-lg hidden">
+        <div class="mt-2 bg-[{{ site.data.colors.navbar_dark }}] dark:bg-gray-800 rounded-lg shadow-lg hidden">
           {% assign subjects_collection = site.subjects %}
             {% if subjects_collection.size > 0 %}
               {% for subject in subjects_collection %}
                 <a
                   href="/tests/{{ subject.subject }}"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-[#e0c4a1] dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-[{{ site.data.colors.highlight_dark }}] dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
                 >
                   {{ subject.title | replace: '-', ' ' | capitalize }}
                 </a>
@@ -281,7 +281,7 @@
 
       <a
         href="{{ site.baseurl }}/contact"
-        class="block w-full px-4 py-2 text-left rounded-lg text-gray-700 hover:bg-[#e0c4a1] dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+        class="block w-full px-4 py-2 text-left rounded-lg text-gray-700 hover:bg-[{{ site.data.colors.highlight_dark }}] dark:text-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
         >Contact</a
       >
     </div>

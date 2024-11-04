@@ -1,2 +1,9 @@
-primary: "#1D4ED8"  # Example blue color
-secondary: "#FBBF24"  # Example yellow color
+primary: "#1D4ED8" 
+secondary:
+
+# Light Mode colors (All shades of cream like color)
+navbar_dark: "#ebdbb2"  # Light background color
+black: "#000000"  # Black text color
+highlight: "#f5e6c8"  # Highlight color
+highlight_dark: "#e0c4a1"  # Slighly dark cream like
+light_background: "#f7ecd1"  # Cream like color

@@ -1,12 +1,12 @@
 ---
 layout: default
 ---
-<div class="flex flex-col lg:flex-row min-h-screen bg-[#f7ecd1] dark:bg-gray-900 py-12">
+<div class="flex flex-col lg:flex-row min-h-screen bg-[{{ site.data.colors.lite_background }}] dark:bg-gray-900 py-12">
   <!-- Mobile Navigation Dropdown -->
     <div class="px-4 py-4">
         <div class="lg:hidden p-4 bg-[#e7dcb9] dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 rounded-lg">
             <div class="flex items-center space-x-4">
-            <select id="mobile-nav" onchange="window.location.href=this.value" class="w-full p-2 rounded-lg bg-[#e0c4a1] hover:bg-[#e0c4a1] dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600">
+            <select id="mobile-nav" onchange="window.location.href=this.value" class="w-full p-2 rounded-lg bg-[{{ site.data.colors.highlight_dark }}] hover:bg-[{{ site.data.colors.highlight_dark }}] dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600">
                 <option value=""  >Select Chapter</option>
                 {% assign collection = site[page.subject] %}
                 {% for chapter in collection %}
