@@ -13,32 +13,17 @@ kramdown:
 
 # Collections
 collections:
-  subjects:
+  notes_subjects: # Notes collection
     output: true
     permalink: /notes/:path/
-  business:
-    output: true
-    permalink: /notes/business/:path/
-  mathematics:
-    output: true
-    permalink: /notes/mathematics/:path/
-  computer_science:
-    output: true
-    permalink: /notes/computer_science/:path/
-  test_subjects: # Test collections from here
+  test_subjects: # Test collection
     output: true
     permalink: /tests/:path/
-  business_test:
+  notes:
     output: true
-    permalink: /tests/business/:path/
-  mathematics_test:
+  tests:
     output: true
-    permalink: /tests/mathematics/:path/
-  computer_science_test:
-    output: true
-    permalink: /tests/computer_science/:path/
 
 include:
-  - _business
-  - _computer_science
-  - _mathematics
+  - _notes
+  - _tests

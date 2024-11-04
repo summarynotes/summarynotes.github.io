@@ -1,0 +1,72 @@
+---
+layout: note
+title: 5. Processor fundamentals
+subject: computer_science
+level: AS
+---
+<u><b>Chapter 5: Processor fundamentals</b></u>
+
+## Von-Neuman model of computer system
+
+- There is memory to store program which consist of several instructions. Processor has direct access to memory and executes instruction sequentially.
+
+## CPU Architecture.
+
+![cpu](../img/cpu.png)
+
+- Components:
+    - PC: Program Counter. Holds address of next instruction.
+    - MAR: Memory Address Register.  Holds memory location to read from.
+    - MDR/MBR: Memory Data/Buffer Register. Holds data after just reading or when about to write.
+    - IX: Index register. Used in indexed addressing.
+    - CIR: Current Instruction Register.
+    - SR: Status register. Contains bits/flags that change during processing and can be accessed individually.
+
+- System bus:
+    - Data bus carries data(instruction, address or value). Bidirectional.
+    - Address bus carries an address. One way to memory controller or I/O controller.
+    - Control bus: Carries control signal. Bidirectional.
+
+![bus](../img/bus.png)
+
+## System Performance
+
+- Dictated by:
+    - Processor clock speed
+    - Word length: Number of bits that can be handled as one unit. Choice of word length also impacts bus widths and register size.
+    - Cache size
+    - Number of cores(processors).
+
+## I/O ports:
+
+- USB:
+    - Serial standard
+    - It is a bus.
+    - Can handle 127 devices
+    - Several versions.
+    - Plug-and-play.
+
+- VGA: Video graphics array. Doesn't transmit audio component.
+- HDMI: High quality audio+video.
+
+## Fetch-Execute Cycle:
+
+```markdown
+MAR <- [PC] //Content of PC to MAR
+PC <- [PC]+1; MDR <- [[MAR]] //PC incremented and Content of address pointed by MAR is transferred to MDR. Simultaneously.
+CIR <- [MDR] // Content of MDR to CIR
+```
+
+![fe_cycle](../img/fe_cycle.png)
+
+## Interrupt handling
+
+> Interrups are signals(mostly important ones).
+
+- Interrupts are detected at end of F-E cycle.
+- Content of PC and registers are saved
+- Interrupt handler or ISR is initialized by loading address into PC.
+- When done, check if more.
+- If no further interrupt, restore saved contents of registers and continue.
+
+---
