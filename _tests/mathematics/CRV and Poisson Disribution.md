@@ -1,9 +1,17 @@
+---
+layout: test
+title: CRV and Poisson Disribution
+subject: mathematics
+level: AS
+time: 50min
+---
+
 # Continuous Random Variable and Poisson Distribution
 
 Full marks: 32
 <hr>
 
-1. The random variable X is a continuous random variable with probability density function
+## 1. The random variable X is a continuous random variable with probability density function
 
 ![pdf1](../img/pdf1.png)
 
@@ -15,11 +23,11 @@ v) Find the median of X. (2)
 
 <hr>
 
-2. Jess is watching a shower of meteors(shooting stars). During the shower, she sees meteors at an average rate of 1.3 per minute.
+## 2. Jess is watching a shower of meteors(shooting stars). During the shower, she sees meteors at an average rate of 1.3 per minute.
 
 i) State conditions requried for a Poisson distribution to be a suitable model for the number of meteors which Jess sees during a randomly selected minute.(2)<br>
 
-You may assume that these conditions are satisfied.
+You may assume that these conditions are satisfied.<br>
 ii) Find the probability that, during one minute, Jess sees:(4)<br>
 a) exactly one meteor
 b) at least 4 meteors.
