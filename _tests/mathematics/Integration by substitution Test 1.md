@@ -14,6 +14,6 @@ time: 45min
 
 2) $$\int \frac{1}{\sqrt{a^2 - x^2}} \, dx \quad \text{[Use } x = a \sin(\theta) \text{]} = \arcsin\left(\frac{x}{a}\right) + C$$
 
-3) $$\int \frac{1}{\sqrt{x^2 + a^2}} \, dx \quad \text{[Use } x = a \tan(\theta) \text{]} = \ln\left| x + \sqrt{x^2 + a^2} \right| + C$$
+3) $$\int \frac{1}{\sqrt{x^2 + a^2}} \, dx \quad \text{[Use } x = a \tan(\theta) \text{]} = \ln\left( x + \sqrt{x^2 + a^2} \right) + C$$
 
 ---
