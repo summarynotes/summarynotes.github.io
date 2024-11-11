@@ -1,3 +1,10 @@
+---
+layout: note
+title: Pure Maths 3 Topics
+subject: mathematics
+level: A2
+---
+
 # Pure maths 3
 
 ## Algebra:
