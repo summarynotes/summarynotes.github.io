@@ -7,7 +7,7 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter_opts:
-    line_numbers: true
+    line_numbers: false
   auto_ids: true
   toc_levels: 1..6
 
