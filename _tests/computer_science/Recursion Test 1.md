@@ -6,8 +6,6 @@ level: AS
 time: 3hrs
 ---
 
-> This test question isn't complete yet.
-
 ## Recursive to Iterative
 
 ### 1) The pseudocode given below converts decimal number to corresponding binary.
@@ -74,6 +72,23 @@ ii) Write program code for recursive version ToDenaryRecursive().
 
 iii) Test both versions of function with same value.
 
+### 2) The given pseudocode calculates the factorial of a number iteratively.
+
+```markdown
+FUNCTION FactorialIterative(N):
+    Result <- 1
+    FOR i <- 1 TO N
+        Result <- Result * i
+    NEXT i
+    RETURN Result
+```
+
+i) Write program code defining the function FactorialIterative().
+
+ii) Write program code for recursive version FactorialRecursive().
+
+iii) Test both versions of the function with the same value.
+
 ---
 
 # Questions present below are from past papers.
@@ -107,5 +122,72 @@ ii) Call the function with parameters 5 and 6.
 iii) Write program that defines function Iterative(Num1, Num2) that works similar to the function above but iteratively.
 
 iv) Call the Iterative() function with parameters 5 and 6.
+
+
+---
+
+> Question taken from 2021-Oct-Nov-41 (9618)
+
+### 2) Study the following pseudocode for a recursive function:
+
+```markdown
+FUNCTION Unknown(BYVAL X, BYVAL Y : INTEGER) RETURNS INTEGER
+    IF X < Y THEN
+        OUTPUT X + Y
+        RETURN (Unknown(X + 1, Y) * 2)
+    ELSE
+        IF X = Y THEN
+            RETURN 1
+        ELSE
+            OUTPUT X + Y
+            RETURN (Unknown(X - 1, Y) DIV 2)
+        ENDIF
+    ENDIF
+ENDFUNCTION
+```
+
+i) Write program code to declare the function **Unknown()**. 
+
+ii) The main program needs to run all three of the following function calls and output the result
+of each call. Write program code for the main program.
+
+- Unknown(10, 15)
+- Unknown(10, 10)
+- Unknown(15, 10)
+
+iii) Rewrite the function **Unknown()** as an iterative function, **IterativeUnknown()**.
+
+iv) Call **IterativeUnknown()** with same parameters as in **ii**.
+
+---
+
+## Iterative to Recursive
+
+> 
+
+### 1) The iterative function IterativeCalculate() totals all the divisors of its integer parameter and returns this total.
+
+```markdown
+FUNCTION IterativeCalculate(Number : INTEGER) RETURNS INTEGER
+    DECLARE Total : Integer
+    DECLARE ToFind : Integer
+    ToFind ← Number
+    Total ← 0
+    WHILE Number <> 0
+        IF ToFind MODULUS Number = 0 THEN
+            Total ← Total + Number
+        ENDIF
+        Number ← Number - 1
+    ENDWHILE
+    RETURN Total
+ENDFUNCTION
+```
+
+i) Write program code for **IterativeCalculate()**.
+
+ii) Write program code to call **IterativeCalculate()** with 10 as the parameter and
+output the return value.
+
+iii)  Write program code for recursive version **RecursiveValue(Number : INTEGER, ToFind : INTEGER)**.
 
 ---
