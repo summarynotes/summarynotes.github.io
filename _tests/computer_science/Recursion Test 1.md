@@ -126,7 +126,7 @@ iv) Call the Iterative() function with parameters 5 and 6.
 
 ---
 
-> Question taken from 2021-Oct-Nov-41 (9618)
+> Question taken from 2021-Oct-Nov-41
 
 ### 2) Study the following pseudocode for a recursive function:
 
@@ -163,7 +163,7 @@ iv) Call **IterativeUnknown()** with same parameters as in **ii**.
 
 ## Iterative to Recursive
 
-> Question taken from 2023-Oct-Nov-42 (9618)
+> Question taken from 2023-Oct-Nov-42
 
 ### 1) The iterative function IterativeCalculate() totals all the divisors of its integer parameter and returns this total.
 
@@ -189,5 +189,38 @@ ii) Write program code to call **IterativeCalculate()** with 10 as the parameter
 output the return value.
 
 iii)  Write program code for recursive version **RecursiveValue(Number : INTEGER, ToFind : INTEGER)**.
+
+---
+
+> Question taken from 2023-Oct-Nov-43
+
+### 2) This iterative pseudocode algorithm for the function IterativeVowels() takes a string as a parameter and counts the number of lower-case vowels in this string.
+
+```markdown
+FUNCTION IterativeVowels(Value : STRING) RETURNS INTEGER
+    DECLARE Total : INTEGER
+    DECLARE LengthString : INTEGER
+    DECLARE FirstCharacter : CHAR
+    Total ← 0
+    LengthString ← LENGTH(Value)
+    FOR X ← 0 TO LengthString - 1
+        FirstCharacter ← MID(Value, 0, 1)
+        IF FirstCharacter = 'a' OR FirstCharacter = 'e' OR FirstCharacter = 'i' OR FirstCharacter = 'o' OR FirstCharacter = 'u' THEN
+            Total ← Total + 1
+        ENDIF
+        Value ← MID(Value, 1, LENGTH(Value)-1)
+    NEXT X
+    RETURN Total
+ENDFUNCTION
+```
+
+i) Write program code for the function **IterativeVowels()**.
+
+ii) Write program code to call the function IterativeVowels() with the parameter
+"house" from the main program.
+
+iii) Rewrite the function IterativeVowels() as a recursive function with the identifier RecursiveVowels().
+
+iv) Write program code to call the function RecursiveVowels() with the parameter "imagine" from the main program.
 
 ---
