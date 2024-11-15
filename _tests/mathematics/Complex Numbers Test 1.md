@@ -40,3 +40,5 @@ iii) $$(2+3i)^3$$
 
 #### 6) Solve the equation:
 $$ z + 2 \cdot z^* = \frac{15}{2+i} $$
+
+---

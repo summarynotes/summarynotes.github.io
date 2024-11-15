@@ -37,7 +37,7 @@ You are required to design a simple library management system using Object-Orien
 | **get_membership_id()** | Returns the membership ID of the member |
 | **set_membership_id(membership_id)** | Sets the membership ID of the member |
 | **borrow_book(book)** | Adds a book to the member's list of borrowed books |
-| **return_book(book)** | Removes a book from the member's list of borrowed books |
+| **return_book(isbn)** | Removes a book from the member's list of borrowed books using pop() method after linear search|
 
 ### Tasks:
 
@@ -60,7 +60,7 @@ You are required to design a simple library management system using Object-Orien
    - Save your program code.
 
 4. **Define **Member** Class Methods (6 marks)**
-   - Write program code for the class methods **get_name()**, **set_name(name)**, **get_membership_id()**, **set_membership_id(membership_id)**, **borrow_book(book)**, and **return_book(book)**.
+   - Write program code for the class methods **get_name()**, **set_name(name)**, **get_membership_id()**, **set_membership_id(membership_id)**, **borrow_book(book)**, and **return_book(isbn)**.
    - Save your program code.
 
 5. **Main Program (5 marks)**
