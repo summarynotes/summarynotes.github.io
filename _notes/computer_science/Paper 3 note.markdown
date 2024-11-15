@@ -391,6 +391,7 @@ PRINT MyIntegerPointer^ //This is called derefencing gives value of Num1
 - S=1 sets value of Q to 1 and Q' to 0
 - R=1 sets value of Q to 0 and Q' to 1
 - S=0, R=0 => output remains same as before
+
 > SR flipflop has invalid state S=1,R=1. In this case, use Q=0 and Q' = 1
 
 ### JK flipflop
