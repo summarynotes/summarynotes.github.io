@@ -1,29 +1,67 @@
-<!-- ---
+---
 layout: test
 title: K-Map Test 1
 subject: computer_science
 level: A2
 time: 45min
---- -->
+---
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 
 ## Karnaugh Map - Test 1
 
-#### 1) Obtain optimized SOP for following truth table using K-Map:
+#### 1) Obtain optimized SOP for the following truth tables using K-Map:
 
-a) 3 variable
+a) **3-variable truth table** 
 
-b) 4 variable
+| A | B | C | X |
+|---|---|---|---|
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 |
 
-#### 2) Simplify the following boolean expression using K-Map:
+b) **4-variable truth table** 
 
-a) A'BC + ABC' <- Try to make overlapping loops
+| A | B | C | D | X |
+|---|---|---|---|---|
+| 0 | 0 | 0 | 0 | 1 |
+| 0 | 0 | 0 | 1 | 0 |
+| 0 | 0 | 1 | 0 | 1 |
+| 0 | 0 | 1 | 1 | 1 |
+| 0 | 1 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 1 | 0 |
+| 0 | 1 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 |
+| 1 | 0 | 1 | 0 | 1 |
+| 1 | 0 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 1 |
+| 1 | 1 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 1 |
 
-b) 0 2 11 8 1 3 <- Corner and a line, 4 variables
+#### 2) Simplify the following boolean expressions using K-Map:
 
-#### 3) The following logic circuits contain some redundancy. Use K-Map to get simplified SOP and draw logic circuit of the simplified expression:
+- $$ \ F(A, B, C) = \overline{A}BC + AB\overline{C} + A\overline{B}\overline{C} + \overline{A}\overline{B}C + ABC $$
 
-a) <- Half-adder adder circuit with only NAND gate
+- $$ \ F(A, B, C, D) = AB\overline{C}D + A\overline{B}CD + A\overline{B}\overline{C}D + ABC\overline{D} + \overline{A}B\overline{C}\overline{D} + \overline{A}BCD + AB\overline{C}\overline{D} $$
 
-b) <- 
+#### 3) The following logic circuits contain some redundancy. Use K-Map to get simplified SOP and draw the logic circuit of the simplified expression:
 
---- 
+a) 
+![logic_ckt_1](../img/logic_ckt_1.png)
+
+b) 
+
+![logic_ckt_2](../img/logic_ckt_2.png)
+
+---
