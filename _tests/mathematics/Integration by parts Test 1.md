@@ -18,6 +18,6 @@ time: 45min
 
 5. $$ \int x^3 e^x \, dx $$
 
-6. $$ \int \tan(x) \, dx $$
+6. $$ \int x \tan(x) \, dx $$
 
 ---
