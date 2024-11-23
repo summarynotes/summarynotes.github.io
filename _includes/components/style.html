@@ -19,13 +19,12 @@
     .markdown-body table th,
     .markdown-body table td {
       padding: 0.75rem;
-      border: 1px solid #e5e7eb;
-      background-color: transparent;
+      border: 1px solid #000000;
     }
     
     .dark .markdown-body table th,
     .dark .markdown-body table td {
-      border-color: #374151;
+      border-color: #ffffff;
       color: #e5e7eb;
     }
     
@@ -53,15 +52,12 @@
       background-color: #374151;
     }
     
-    /* Force list styles in markdown content */
     .markdown-body ul {
       list-style-type: disc !important;
-      padding-left: 2em !important;
     }
     
     .markdown-body ol {
       list-style-type: decimal !important;
-      padding-left: 2em !important;
     }
 
     .markdown-body pre, .markdown-body code {
@@ -111,10 +107,34 @@
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
     }
     
+    .markdown-body hr {
+        border: 0; /* Remove default border */
+        height: 1px; /* Set the desired thickness */
+        background-color: #000000; /* Light mode color */
+    }
+
+    .dark .markdown-body hr {
+        background-color: #ffffff; /* Dark mode color */
+    }
+    
     /* Additional dark mode optimizations */
     @media (prefers-color-scheme: dark) {
       .markdown-body {
         color-scheme: dark;
       }
+    }
+
+    h2 {
+      text-decoration: underline;
+      text-decoration-color: black;
+      text-decoration-thickness: 1px;
+    }
+
+    h1 {
+      text-align: center;
+      text-decoration: underline;
+      text-decoration-color: black;
+      text-decoration-thickness: 2px;
+      font-size: x-large !important;
     }
     </style>

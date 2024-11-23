@@ -669,7 +669,7 @@ PRINT MyIntegerPointer^ //This is called derefencing gives value of Num1
     - There is also agreement on encryption algorithms to be used.
 
 - How does TLS work?
-    - It has two main layers: Record layer(for data transfer with or without encryption) and Handshare layer(For secure session establishment)
+    - It has two main layers: Record layer(for data transfer with or without encryption) and Handshake layer(For secure session establishment)
     - TLS is improvement upon SSL with these extra features:
         - Ability to add new authentication methods
         - Session caching to resume a session if possible
